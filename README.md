@@ -2,9 +2,9 @@
 Criação de uma página baseada no protótipo criado pela Eficaz Marketing.
 
 Integrantes do grupo:
-- Gabriela
+- Gabriela Leal
 - Gabriel Medina
 - Gabriel de Oliveira
-- Enrico
-- João
+- Enrico Bernardes
+- João Pedro dos Santos
 - Guilherme Miranda
