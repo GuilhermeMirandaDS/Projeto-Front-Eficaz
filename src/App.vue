@@ -28,17 +28,22 @@
             </div>
         </div>
     </nav>
+
+    <PromoCardComponent />
+
     <FooterComponent />
 </body>
 
 </template>
 
 <script>
-import FooterComponent from './FooterComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
+import PromoCardComponent from './components/PromoCardComponent.vue';
 
 export default {
   components: {
-    FooterComponent
+    FooterComponent,
+    PromoCardComponent
   }
 };
 </script>
