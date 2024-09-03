@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import FooterComponent from './components/FooterComponent.vue';
+import FooterComponent from './components/components/FooterComponent.vue';
 import PromoCardComponent from './components/PromoCardComponent.vue';
 
 export default {
