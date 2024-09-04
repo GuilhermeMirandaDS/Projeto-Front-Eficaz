@@ -19,15 +19,13 @@ export default {
 
 <style scoped>
 .container {
-  display: flex;
-  justify-content: center; 
   flex-wrap: wrap;
   max-width: 100%; 
   padding: 10px;
 }
 
 .image-container {
-  position: relative;
+  position:relative;
   width: 36%; 
   margin: 100px;
 }

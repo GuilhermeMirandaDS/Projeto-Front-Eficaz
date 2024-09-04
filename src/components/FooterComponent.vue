@@ -58,11 +58,7 @@
         color: #fff;
         padding: 40px 20px;
         width: 100%;
-<<<<<<< HEAD
-        position: fixed;
-=======
         /* position: fixed; */
->>>>>>> 24252945aaf6ef3884db9d28b75b8986e7e71889
         bottom: 0;
         left: 0;
     }

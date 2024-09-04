@@ -28,17 +28,15 @@
             </div>
         </div>
     </nav>
-
-<<<<<<< HEAD
-
-    <FooterComponent />
-    <PromoCardComponent/>
-    <DestaqueComponent />
-=======
-    <PromoCardComponent />
-
-    <FooterComponent />
->>>>>>> 24252945aaf6ef3884db9d28b75b8986e7e71889
+    <div class="destaque">
+        <DestaqueComponent />
+    </div>
+    <div class="promo">
+        <PromoCardComponent/>
+    </div>
+    <div class="footer">
+        <FooterComponent />
+    </div>
 </body>
 
 </template>
@@ -46,26 +44,20 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue';
 import PromoCardComponent from './components/PromoCardComponent.vue';
-<<<<<<< HEAD
 import DestaqueComponent from './components/DestaqueComponent.vue';
 export default {
   components: {
     FooterComponent,
     PromoCardComponent,
     DestaqueComponent
-=======
-
-export default {
-  components: {
-    FooterComponent,
-    PromoCardComponent
->>>>>>> 24252945aaf6ef3884db9d28b75b8986e7e71889
   }
 };
 </script>
 
 <style scoped>
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
