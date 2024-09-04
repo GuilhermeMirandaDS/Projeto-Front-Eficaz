@@ -22,6 +22,7 @@ export default {
   flex-wrap: wrap;
   max-width: 100%; 
   padding: 10px;
+  padding-bottom: 30%;
 }
 
 .image-container {
