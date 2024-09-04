@@ -58,7 +58,7 @@
         color: #fff;
         padding: 40px 20px;
         width: 100%;
-        position: fixed;
+        /* position: fixed; */
         bottom: 0;
         left: 0;
     }
