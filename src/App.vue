@@ -37,6 +37,9 @@
     <div class="promo">
         <PromoCardComponent/>
     </div>
+    <div class="children">
+        <ChildrenComponent/>
+    </div>
     <div class="footer">
         <FooterComponent />
     </div>
@@ -48,11 +51,13 @@
 import FooterComponent from './components/FooterComponent.vue';
 import PromoCardComponent from './components/PromoCardComponent.vue';
 import DestaqueComponent from './components/DestaqueComponent.vue';
+import ChildrenComponent from './components/ChildrenComponent.vue';
 export default {
   components: {
     FooterComponent,
     PromoCardComponent,
-    DestaqueComponent
+    DestaqueComponent,
+    ChildrenComponent
   }
 };
 </script>
