@@ -31,6 +31,9 @@
         </div>
       </div>
     </nav>
+    <div class="hero">
+        <HeroComponent/>
+    </div>    
     <div class="destaque">
         <DestaqueComponent />
     </div>
@@ -52,8 +55,10 @@ import FooterComponent from './components/FooterComponent.vue';
 import PromoCardComponent from './components/PromoCardComponent.vue';
 import DestaqueComponent from './components/DestaqueComponent.vue';
 import ChildrenComponent from './components/ChildrenComponent.vue';
+import HeroComponent from './components/HeroComponent.vue';
 export default {
   components: {
+    HeroComponent,
     FooterComponent,
     PromoCardComponent,
     DestaqueComponent,
