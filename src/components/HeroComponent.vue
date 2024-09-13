@@ -32,10 +32,7 @@
           </div>
   
           <div class="container-direita">
-            <!-- A imagem do range será colocada atrás do headset -->
-            <div class="range">
-              <img src="@/assets/range.png" alt="range" />
-            </div>
+
   
             <div class="cartao-produto-hero">
               <img
@@ -234,15 +231,7 @@
     padding: 60px;
   }
   
-  .range {
-    position: absolute; /* Faz com que a range não afete o layout */
-    top: 0; /* Posiciona no topo do container */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* Preenche a largura do container */
-    height: 100%; /* Preenche a altura do container */
-    object-fit: cover; /* Mantém as proporções da imagem */
-    z-index: 1; /* Coloca a range atrás do headsetHero */
-  }
+
   
   /* Estilos das informações em bolhas */
   .bolha-info {
