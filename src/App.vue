@@ -75,7 +75,8 @@ export default {
 <style scoped>
 
 body {
-    margin: 10;
+    margin: 0;
+    padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f5f5f5;
 }
