@@ -2,7 +2,7 @@
   <div class="heroSection" v-intersect="onIntersect">
     <div class="imagem__linha">
       <img src="../assets/Range.png" alt="" />
-      <img src="../assets/Range2.png" alt="" class="imagem__linha2">
+  
     </div>
 
     <div class="containerSection">
@@ -146,16 +146,11 @@ export default {
   width: 95%;
   max-width: 100%;
   margin-left: 5%;
-  margin-top: -100px;
+
   z-index: 0;
   animation: slide 10s linear infinite;
 }
 
-.imagem__linha2 {
-  width: 50% !important;
-  margin-left: 50% !important;
-  margin-top: 220px !important;
-}
 
 .containerSection {
   display: flex;
@@ -212,8 +207,6 @@ export default {
   cursor: pointer;
 }
 
-.iconsWrapper {
-}
 
 .icons2 {
   background-color: black;
