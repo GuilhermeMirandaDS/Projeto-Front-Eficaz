@@ -37,6 +37,9 @@
     <div class="destaque">
         <DestaqueComponent />
     </div>
+    <div class="new">
+        <NewProductsComponent/>
+    </div>
     <div class="promo">
         <PromoCardComponent/>
     </div>
@@ -56,13 +59,15 @@ import PromoCardComponent from './components/PromoCardComponent.vue';
 import DestaqueComponent from './components/DestaqueComponent.vue';
 import ChildrenComponent from './components/ChildrenComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
+import NewProductsComponent from "./components/NewProductsComponent.vue"
 export default {
   components: {
     HeroComponent,
     FooterComponent,
     PromoCardComponent,
     DestaqueComponent,
-    ChildrenComponent
+    ChildrenComponent,
+    NewProductsComponent
   }
 };
 </script>

@@ -19,20 +19,22 @@ export default {
 
 <style scoped>
 .container {
+  display: flex; 
   flex-wrap: wrap;
+  justify-content: space-between; 
   max-width: 100%; 
   padding: 10px;
-  margin-bottom: 38%;
+  margin-bottom: 50%;
 }
 
 .image-container {
   position:relative;
-  width: 36%; 
-  margin: 100px;
+  width: 45%; 
+  margin: 20px; 
 }
 
 .image-container img {
-  width: 100%;
+  width: 94%;
   height: auto;
   border-radius: 10px;
   transition: opacity 0.3s ease;
