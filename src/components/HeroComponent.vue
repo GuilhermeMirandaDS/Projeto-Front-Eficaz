@@ -1,12 +1,11 @@
 <template>
   <div class="heroSection" v-intersect="onIntersect">
-    <div class="imagem__linha">
-      <img src="../assets/Range.png" alt="" />
-  
-    </div>
-
     <div class="containerSection">
       <div class="container__1">
+          <div class="imagem__linha">
+          <img src="../assets/Range.png" alt="" />
+          <img src="../assets/Range2.png" alt="" class="imagem__linha2">
+        </div>
         <h1 class="titulo" :class="{ 'animate-complex': visible }">GABINI HEADSET STORE</h1>
 
         <div class="container__1__2" :class="{ 'animate-complex delay-1': visible }">
@@ -112,6 +111,7 @@ export default {
 
 <style>
 
+
 @keyframes complexEntry {
   0% {
     opacity: 0;
@@ -122,6 +122,22 @@ export default {
     transform: translateY(0) scale(1);
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+
+
 
 .animate-complex {
   opacity: 0;
@@ -143,13 +159,20 @@ export default {
 
 .imagem__linha img {
   position: absolute;
-  width: 95%;
+  width: 85%;
   max-width: 100%;
-  margin-left: 5%;
-
+  margin-left: 15%;
   z-index: 0;
-  animation: slide 10s linear infinite;
+
 }
+
+.imagem__linha2 {
+  width: 45% !important;
+  margin-left: 54% !important;
+  margin-top: 120px !important;
+
+}
+
 
 
 .containerSection {
@@ -159,7 +182,8 @@ export default {
 }
 
 .container__1 {
-  margin-left: 0px;
+  margin-left: -150px;
+
 }
 
 .titulo {
@@ -175,7 +199,8 @@ export default {
 
 .container__1__2 {
   display: flex;
-  gap: 25px;
+  gap: 15px;
+  padding-left: 0px;
 }
 
 .subTitulo {
@@ -205,6 +230,14 @@ export default {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.buttonBase:hover {
+  background-color: #f0f0f0; 
+  border-color: #000000; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
 }
 
 
@@ -219,7 +252,8 @@ export default {
   display: flex;
   margin-top: 90px;
   align-items: center;
-  gap: 56px;
+  gap: 70px;
+  margin-bottom: 80px
 }
 
 .parent {
@@ -255,20 +289,23 @@ export default {
   background-image: url("../assets/Rectangle.png");
   background-repeat: no-repeat;
   background-size: 90%;
-  width: 105%;
-  height: 100%;
+  width: 633px;
+  height: 679px;
   z-index: 10;
   position: absolute;
   margin-top: 135px;
-  margin-left: -30px;
+  margin-left: 150px;
 }
 
 .imagem__fone {
-  margin-top: 75px;
-  margin-left: 20px;
+  margin-top: 55px;
+  margin-left: 150px;
   width: 95%;
   z-index: 11;
   position: relative;
+  gap: 70px;
+  width: 600px;
+  height: 700px;
 }
 
 .container__2__1 {
@@ -282,9 +319,15 @@ export default {
   width: 230px;
   z-index: 13;
   margin-top: -510px;
-  margin-left: 380px;
+  margin-left: 475px;
   border-radius: 60px; 
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+}
+.container__2__1:hover {
+  background-color: #f0f0f0; 
+  border-color: #000000; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
 }
 
 .container__2__2 {
@@ -295,13 +338,22 @@ export default {
   padding: 16px 20px;
   gap: 16px;
   height: 52px;
-  width: 230px;
+  width: 200px;
   z-index: 13;
   margin-top: 260px;
-  margin-left: 20px;
+  margin-left: 170px;
   border-radius: 60px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
+
+.container__2__2:hover {
+  background-color: #f0f0f0; 
+  border-color: #000000; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
+}
+
+
 
 .icone__bolinha {
   padding: 0.6em;
