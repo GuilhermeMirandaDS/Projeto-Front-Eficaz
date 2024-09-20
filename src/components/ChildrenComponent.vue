@@ -1,8 +1,8 @@
 <template>
     <div class="children-background">
         <div class="hp-img">
-            <img id="red-hp" src="">
-            <img id="pink-hp" src="../assets/ImagepinkHP.png">
+            <img id="red-hp" src="../assets/ImageredHP.png" alt="Red Headphone">
+            <img id="pink-hp" src="../assets/ImagepinkHP.png" alt="Pink Headphone">
         </div>
         <div class="hp-info">
             <h1 class="title">JBL Children's Bluetooth Headphones</h1>
@@ -30,11 +30,28 @@
     </div>
 
 </template>
-<script>
 
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const redButton = document.getElementById('red-btn');
+    const pinkButton = document.getElementById('pink-btn');
     
+    const redImage = document.getElementById('red-hp');
+    const pinkImage = document.getElementById('pink-hp');
+
+    redButton.addEventListener('click', function() {
+        redImage.style.display = 'block';  
+        pinkImage.style.display = 'none';  
+    });
+
+    pinkButton.addEventListener('click', function() {
+        redImage.style.display = 'none';   
+        pinkImage.style.display = 'block'; 
+    });
+ });
 
 </script>
+
 <style scoped>
 .children-background {
     background-color: #f3f5f9;
@@ -49,6 +66,15 @@
     justify-content: center;
     gap: 80px;
 }
+
+#red-hp {
+    display: none;
+}
+
+#pink-hp {
+    display: block; 
+}
+
 .hp-info{
     display: flex;
     flex-direction: column;
@@ -107,6 +133,17 @@
     border-radius: 50%;
     padding: 0px;
 }
+#red-btn:hover, #pink-btn:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: 0.5ms ease-in-out;
+}
+/* #red-btn:enabled{
+    background-image: url(../assets/Check.svg);
+    background-position: center;
+    background-size: contain;
+    filter: opacity(30%);
+} */
 
 #pink-btn{
     background-image: url(../assets/pink-button.svg);
@@ -169,7 +206,7 @@ h2{
     border-radius: 40px;
     padding: 6px 14px;
     text-wrap: nowrap;
-    border: 1px solid var(rgba(205, 67, 255, 1), #CD43FF);
+    border: 1px solid rgba(205, 67, 255, 1);
 }
 .buyBtn{
     background-color: white;
