@@ -46,6 +46,9 @@
     <div class="children">
         <ChildrenComponent/>
     </div>
+    <div calss="Comments">
+        <CommentsComponent/>
+    </div>
     <div class="footer">
         <FooterComponent />
     </div>
@@ -60,6 +63,7 @@ import DestaqueComponent from './components/DestaqueComponent.vue';
 import ChildrenComponent from './components/ChildrenComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
 import NewProductsComponent from "./components/NewProductsComponent.vue"
+import CommentsComponent from "./components/CommentsComponent.vue"
 export default {
   components: {
     HeroComponent,
@@ -67,7 +71,8 @@ export default {
     PromoCardComponent,
     DestaqueComponent,
     ChildrenComponent,
-    NewProductsComponent
+    NewProductsComponent,
+    CommentsComponent
   }
 };
 </script>
