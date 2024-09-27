@@ -13,7 +13,7 @@
             <div class="colors">
                 <p class="color-opt">Color Options</p>
                 <button type="button" id="red-btn"><img src=""></button>
-                <button type="button" id="pink-btn"><img src=""></button>
+                <button type="button" id="pink-btn" class="selected"><img src=""></button>
             </div>
             <div class="price">
                 <p class="money-sign">$</p>
@@ -32,23 +32,37 @@
 </template>
 
 <script>
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const redButton = document.getElementById('red-btn');
     const pinkButton = document.getElementById('pink-btn');
-    
     const redImage = document.getElementById('red-hp');
     const pinkImage = document.getElementById('pink-hp');
 
-    redButton.addEventListener('click', function() {
-        redImage.style.display = 'block';  
-        pinkImage.style.display = 'none';  
+    function changeImage(showImage, hideImage) {
+        hideImage.style.display = 'none';
+        
+        showImage.style.display = 'block';
+        showImage.classList.add('slide-in');
+        setTimeout(() => showImage.classList.remove('slide-in'), 500);
+    }
+
+    function selectButton(selectedBtn, otherBtn) {
+        selectedBtn.classList.add('selected');
+        otherBtn.classList.remove('selected');
+    }
+
+    redButton.addEventListener('click', () => {
+        changeImage(redImage, pinkImage);
+        selectButton(redButton, pinkButton);
     });
 
-    pinkButton.addEventListener('click', function() {
-        redImage.style.display = 'none';   
-        pinkImage.style.display = 'block'; 
+    pinkButton.addEventListener('click', () => {
+        changeImage(pinkImage, redImage);
+        selectButton(pinkButton, redButton);
     });
- });
+});
+
+
 
 </script>
 
@@ -67,12 +81,66 @@
     gap: 80px;
 }
 
+.hp-img img{
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.colors button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.colors button::after {
+    content: "✔";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: green;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.colors button.selected::after {
+    display: flex;
+}
+
+.slide-in {
+    display: block;
+    animation: slideUpIn 0.5s forwards;
+}
+
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #red-hp {
     display: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #pink-hp {
-    display: block; 
+    display: block;
+    margin: 0px;
+    padding: 0px; 
 }
 
 .hp-info{
@@ -136,14 +204,7 @@
 #red-btn:hover, #pink-btn:hover {
     cursor: pointer;
     filter: brightness(90%);
-    transition: 0.5ms ease-in-out;
 }
-/* #red-btn:enabled{
-    background-image: url(../assets/Check.svg);
-    background-position: center;
-    background-size: contain;
-    filter: opacity(30%);
-} */
 
 #pink-btn{
     background-image: url(../assets/pink-button.svg);

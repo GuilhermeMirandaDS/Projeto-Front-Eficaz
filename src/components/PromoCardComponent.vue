@@ -43,7 +43,7 @@
         const minutes = document.getElementById('minutes');
         const seconds = document.getElementById('seconds');
 
-        const finalDate = new Date('September 23 2024 00:00:00');
+        const finalDate = new Date('October 15 2024 00:00:00');
 
         function updateCountdown() {
             const currentTime = new Date();
@@ -53,10 +53,24 @@
             const m = Math.floor(diff / 1000 / 60) % 60;
             const s = Math.floor(diff / 1000) % 60;
 
-            hours.innerHTML = h < 10 ? '0' + h : h;
-            minutes.innerHTML = m < 10 ? '0' + m : m;
-            seconds.innerHTML = s < 10 ? '0' + s : s;
+            updateNumber(hours, h);
+            updateNumber(minutes, m);
+            updateNumber(seconds, s);
         }
+
+        function updateNumber(element, newValue) {
+            const currentValue = parseInt(element.innerHTML, 10);
+            const formattedValue = newValue < 10 ? '0' + newValue : newValue; 
+
+            if (currentValue !== newValue) {
+                element.innerHTML = formattedValue;
+                element.classList.add('slide-in');
+                
+                setTimeout(() => {
+                    element.classList.remove('slide-in');
+                }, 500);
+            }
+    }
 
         setInterval(updateCountdown, 1000);
     });
@@ -102,7 +116,7 @@ h1{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 600px;
+    width: 600px;
     margin-bottom: 20px;
 }
 
@@ -111,7 +125,22 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: 160px;
+    height: 160px;
+}
+
+.slide-in {
+    animation: slideUpIn 0.5s forwards;
+}
+
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h2{
@@ -121,6 +150,9 @@ h2{
     font-size: 127px;
     font-weight: 500;
     margin: 0;
+    display: inline-block;
+    text-align: center;
+    width: 230px;
 }
 
 .timer-name {
