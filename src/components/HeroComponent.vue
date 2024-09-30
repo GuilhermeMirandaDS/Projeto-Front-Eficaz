@@ -1,11 +1,12 @@
 <template>
   <div class="heroSection" v-intersect="onIntersect">
+    <div class="imagem__linha">
+      <img src="../assets/Range.png" alt="" class="imagem__animada" />
+      <img src="../assets/Range2.png" alt="" class="imagem__animada2 imagem__linha2">
+    </div>
+
     <div class="containerSection">
-      <div class="container__1">
-          <div class="imagem__linha">
-          <img src="../assets/Range.png" alt="" />
-          <img src="../assets/Range2.png" alt="" class="imagem__linha2">
-        </div>
+      <div class="container">
         <h1 class="titulo" :class="{ 'animate-complex': visible }">GABINI HEADSET STORE</h1>
 
         <div class="container__textos" :class="{ 'animate-complex delay-1': visible }">
@@ -108,9 +109,7 @@ export default {
   },
 };
 </script>
-
-<style>
-
+<style scoped>
 
 @keyframes complexEntry {
   0% {
@@ -122,22 +121,6 @@ export default {
     transform: translateY(0) scale(1);
   }
 }
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-}
-
-
-
 
 .animate-complex {
   opacity: 0;
@@ -159,16 +142,19 @@ export default {
 
 .imagem__linha img {
   position: absolute;
-  width: 85%;
+  width: 84%;
   max-width: 100%;
   margin-left: 15%;
+  margin-top: 0px;
   z-index: 0;
+  overflow: hidden;
 }
 
 .imagem__linha2 {
-  width: 45% !important;
-  margin-left: 54% !important;
-  margin-top: 120px !important;
+  width: 45.9% !important;
+  margin-left: 53% !important;
+  margin-top: 210px !important;
+  overflow: hidden;
 }
 
 .containerSection {
@@ -177,8 +163,9 @@ export default {
   flex-wrap: wrap;
 }
 
-.container__1 {
-  margin-left: -150px;
+.container {
+  margin-left: 0px;
+  gap: 46px;
 }
 
 .titulo {
@@ -186,16 +173,15 @@ export default {
   font-weight: bold;
   width: 100px;
   line-height: 1em;
-  margin-top: 70px;
+  margin-top: 50px;
   font-family: 'inter', sans-serif;
   letter-spacing: -3px;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.23);
 }
 
-.container_textos {
+.container__textos {
   display: flex;
-  gap: 15px;
-  padding-left: 0px;
+  gap: 25px;
 }
 
 .subTitulo {
@@ -204,7 +190,7 @@ export default {
   font-size: 36px;
   font-family: 'inter', sans-serif;
   font-weight: 600;
-  margin-top: 0px;
+  margin-top: -10px;
 }
 
 .seeMoreDetails {
@@ -225,13 +211,15 @@ export default {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 .buttonBase:hover {
-  background-color: #f0f0f0; 
-  border-color: #000000; 
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.05); 
+  background-color: #f0f0f0;
+  border-color: #000000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.iconsWrapper {
 }
 
 .icons2 {
@@ -243,17 +231,22 @@ export default {
 
 .container__avaliacao {
   display: flex;
-  margin-top: 90px;
+  margin-top: 80px;
   align-items: center;
-  gap: 70px;
-  margin-bottom: 80px;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.parent {
+  display: flex;
+  align-items: start;
 }
 
 .avaliacao__texto {
   font-size: 24px;
   font-weight: 600;
   font-family: 'inter', sans-serif;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .k {
@@ -263,23 +256,31 @@ export default {
   margin-bottom: 6px;
 }
 
+.boughtInPast {
+  font-family: 'inter', sans-serif;
+}
+
+.ratings {
+  color: #a1a1a1;
+  font-family: 'inter', sans-serif;
+}
+
 .imagem__apresentacao {
   background-image: url("../assets/Rectangle.png");
   background-repeat: no-repeat;
   background-size: 90%;
-  width: 633px;
-  height: 679px;
+  width: 105%;
+  height: 100%;
   z-index: 10;
   position: absolute;
-  margin-top: 135px;
-  margin-left: 320px;
+  margin-top: 155px;
+  margin-left: -30px;
 }
 
 .imagem__fone {
-  margin-top: 55px;
-  margin-left: 300px;
-  width: 600px;
-  height: 700px;
+  margin-top: 130px;
+  margin-left: 20px;
+  width: 95%;
   z-index: 11;
   position: relative;
 }
@@ -295,29 +296,7 @@ export default {
   width: 230px;
   z-index: 13;
   margin-top: -510px;
-  margin-left: 595px;
-  border-radius: 60px;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
-}
-.container__garantia:hover {
-  background-color: #f0f0f0; 
-  border-color: #000000; 
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.05); 
-}
-
-.container__bateria {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 16px 20px;
-  gap: 16px;
-  height: 52px;
-  width: 200px;
-  z-index: 13;
-  margin-top: 260px;
-  margin-left: 350px;
+  margin-left: -15px;
   border-radius: 60px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
@@ -334,19 +313,18 @@ export default {
   border-radius: 50%;
 }
 
-.inf h3 {
+.inf h3{
   font-size: 18px;
   color: #a1a1a1;
-  font-family: 'inter', sans-serif;
+  font-family: 'inter' sans-serif;
 }
 
-.inf h4 {
+.inf h4{
   font-size: 20px;
   font-weight: 600;
-  font-family: 'inter', sans-serif;
+  font-family: 'inter' sans-serif;
   margin-top: -10px;
 }
 
-
-
 </style>
+
