@@ -16,7 +16,7 @@
               Welcome to Gabini quality, at our most welcoming price.
             </h3>
             <a href="#" class="buttonBase" :class="{ 'animate-complex delay-2': visible }">
-              <div class="seeMoreDetails">Ver Mais Detalhes</div>
+              <div class="seeMoreDetails">SEE MORE DETAILS</div>
               <div class="iconsWrapper">
                 <img class="icons2" alt="" src="../assets/seta.svg" />
               </div>

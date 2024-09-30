@@ -1,9 +1,13 @@
 <template>
     <div class="children-background">
+
+        <!-- Imagens do produto -->
         <div class="hp-img">
             <img id="red-hp" src="../assets/ImageredHP.png" alt="Red Headphone">
             <img id="pink-hp" src="../assets/ImagepinkHP.png" alt="Pink Headphone">
         </div>
+
+        <!-- Área de informações do produto -->
         <div class="hp-info">
             <h1 class="title">JBL Children's Bluetooth Headphones</h1>
             <div class="reviews">
@@ -23,6 +27,8 @@
                     <p class="prcntoff">22% off</p>
                 </div>
             </div>
+
+            <!-- Área do botão -->
             <div class="button-buy">
                 <a class="buyBtn" href="#"><p class="btn-text">SEE MORE DETAILS</p><img class="arrow-buy" src="../assets/arrow_svg.svg"></a>
             </div>
@@ -32,6 +38,11 @@
 </template>
 
 <script>
+
+// Função que aguarda o carregamento da página e em seguida
+// aciona o funcionamento dos botões para a alteração da imagem do produto,
+// verificando se o botão com a cor desejada não está selecionado
+
 document.addEventListener('DOMContentLoaded', () => {
     const redButton = document.getElementById('red-btn');
     const pinkButton = document.getElementById('pink-btn');
@@ -52,13 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     redButton.addEventListener('click', () => {
-        changeImage(redImage, pinkImage);
-        selectButton(redButton, pinkButton);
+        if (!redButton.classList.contains('selected')) {
+            changeImage(redImage, pinkImage);
+            selectButton(redButton, pinkButton);
+        }
     });
 
     pinkButton.addEventListener('click', () => {
-        changeImage(pinkImage, redImage);
-        selectButton(pinkButton, redButton);
+        if (!pinkButton.classList.contains('selected')) {
+            changeImage(pinkImage, redImage);
+            selectButton(pinkButton, redButton);
+        }
     });
 });
 
@@ -67,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style scoped>
+
+/* Estilização do componente */
+
 .children-background {
     background-color: #f3f5f9;
     width: 1400px;
@@ -78,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
 }
 
 .hp-img img{
@@ -115,32 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
     display: flex;
 }
 
-.slide-in {
-    display: block;
-    animation: slideUpIn 0.5s forwards;
-}
-
-@keyframes slideUpIn {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 #red-hp {
     display: none;
     margin: 0px;
     padding: 0px;
+    max-width: 100%;
+    height: auto; 
 }
 
 #pink-hp {
     display: block;
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
+    max-width: 100%;
+    height: auto; 
 }
 
 .hp-info{
@@ -299,5 +305,71 @@ h2{
     background-color: black;
     border-radius: 50%;
     padding:10px;
+}
+
+/* Animação da troca de imagens */
+
+.slide-in {
+    display: block;
+    animation: slideUpIn 0.5s forwards;
+}
+
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade do componente */
+
+@media (max-width: 768px) {
+    .children-background {
+        align-items: center;
+        justify-content: initial;
+        padding: 0px;
+        gap: 10px;
+        margin: 40px 0px;
+        max-width: 100%;
+        max-height: fit-content;
+    }
+
+    #red-hp, #pink-hp{
+        max-width: 300px;
+    }
+    .hp-info{
+        flex-wrap: wrap;
+        max-width: 300px;
+        margin: 0;
+        
+    }
+    .title{
+        font-size: 26px;
+    }
+    .reviews{
+        gap: 0;
+        max-width: fit-content;
+    }
+    .reviews img{
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .children-background {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        align-items: baseline;
+    }
+
+    #red-hp, #pink-hp{
+        max-width: 50%;
+    }
+    
 }
 </style>
