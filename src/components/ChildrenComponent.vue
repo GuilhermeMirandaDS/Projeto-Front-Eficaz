@@ -1,13 +1,11 @@
 <template>
     <div class="children-background">
 
-        <!-- Imagens do produto -->
         <div class="hp-img">
             <img id="red-hp" src="../assets/ImageredHP.png" alt="Red Headphone">
             <img id="pink-hp" src="../assets/ImagepinkHP.png" alt="Pink Headphone">
         </div>
 
-        <!-- Área de informações do produto -->
         <div class="hp-info">
             <h1 class="title">JBL Children's Bluetooth Headphones</h1>
             <div class="reviews">
@@ -28,7 +26,6 @@
                 </div>
             </div>
 
-            <!-- Área do botão -->
             <div class="button-buy">
                 <a class="buyBtn" href="#"><p class="btn-text">SEE MORE DETAILS</p><img class="arrow-buy" src="../assets/arrow_svg.svg"></a>
             </div>
@@ -38,10 +35,6 @@
 </template>
 
 <script>
-
-// Função que aguarda o carregamento da página e em seguida
-// aciona o funcionamento dos botões para a alteração da imagem do produto,
-// verificando se o botão com a cor desejada não está selecionado
 
 document.addEventListener('DOMContentLoaded', () => {
     const redButton = document.getElementById('red-btn');
@@ -82,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style scoped>
-
-/* Estilização do componente */
 
 .children-background {
     background-color: #f3f5f9;
@@ -307,7 +298,6 @@ h2{
     padding:10px;
 }
 
-/* Animação da troca de imagens */
 
 .slide-in {
     display: block;
@@ -325,7 +315,6 @@ h2{
     }
 }
 
-/* Responsividade do componente */
 
 @media (max-width: 768px) {
     .children-background {

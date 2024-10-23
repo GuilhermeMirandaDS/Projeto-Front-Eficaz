@@ -25,8 +25,6 @@ import { RouterLink, RouterView } from 'vue-router';
         </div>
         <div class="nav-auth">
             <RouterLink to="/userpage"><img src="/src/assets/pfp.png" class="userIMG" alt="User Image"></RouterLink>
-            <a href="#" class="sign-in" style= "font-weight: 900;">SIGN IN</a>
-            <a href="#" class="signup">SIGN UP FOR FREE</a>
         </div>
         <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
           <span></span>
@@ -36,51 +34,21 @@ import { RouterLink, RouterView } from 'vue-router';
       </div>
     </nav>
 
-    <div class="hero">
-        <HeroComponent/>
-    </div>    
-    <div class="destaque">
-        <DestaqueComponent />
-    </div>
-    <div class="new">
-        <NewProductsComponent/>
-    </div>
-    <div class="promo">
-        <PromoCardComponent/>
-    </div>
-    <div class="children">
-        <ChildrenComponent/>
-    </div>
-    <div calss="Comments">
-        <CommentsComponent/>
-    </div>
-    <div class="footer">
-        <FooterComponent />
-    </div>
+    <UserComponent/>
+
+    <FooterComponent />
 </body>
     <RouterView />
 </template>
 
 <script>
-import UserComponent from './components/UserComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
-import PromoCardComponent from './components/PromoCardComponent.vue';
-import DestaqueComponent from './components/DestaqueComponent.vue';
-import ChildrenComponent from './components/ChildrenComponent.vue';
-import HeroComponent from './components/HeroComponent.vue';
-import NewProductsComponent from "./components/NewProductsComponent.vue";
-import CommentsComponent from "./components/CommentsComponent.vue"
+import UserComponent from '../components/UserComponent.vue';
+import FooterComponent from '../components/FooterComponent.vue';
 
 export default {
   components: {
     UserComponent,
-    HeroComponent,
-    FooterComponent,
-    PromoCardComponent,
-    DestaqueComponent,
-    ChildrenComponent,
-    NewProductsComponent,
-    CommentsComponent
+    FooterComponent
   }
 };
 

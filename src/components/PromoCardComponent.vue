@@ -49,7 +49,7 @@
         const minutes = document.getElementById('minutes');
         const seconds = document.getElementById('seconds');
 
-        const finalDate = new Date('October 20 2024 00:00:00');
+        const finalDate = new Date('November 20 2024 00:00:00');
 
         function updateCountdown() {
             const currentTime = new Date();
