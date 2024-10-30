@@ -5,6 +5,7 @@ import LoginPage from '@/components/LoginPage.vue';
 import UserComponent from '@/components/UserComponent.vue';
 
 
+
 const routes = [
   {
     path: '/',

@@ -1,6 +1,6 @@
 <template>
 
-    <body>
+    <div id="app">
         <div class="top-page">
             <img src="../assets/pfp.png" alt="user-pic" class="user-img">
             <div class="user-info1">
@@ -69,11 +69,11 @@
             </div>
         </div>
         <button type="submit" class="save-btn">Save</button>
-    </body>
+    </div>
 </template>
 
 <style scoped>
-body{
+#app{
     display: flex;
     flex-direction: column;
     align-items: center;
