@@ -1,99 +1,83 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
-</script>
-<template>
-<body>
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo">
-          <img src="\src\assets\Logo_nav.png" alt="Logo">
-        </div>
-        <div :class="['nav-links', { active: isMenuActive }]">
-          <a href="#">HOME</a>
-          <a href="#">SALE</a>
-          <a href="#">BUNDLE & SAVE</a>
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle">SHOP BY CATEGORY ▼</a>
-            <div class="dropdown-content">
-              <a href="#">ITEM 01</a>
-              <a href="#">ITEM 02</a>
-              <a href="#">ITEM 03</a>
-              <a href="#">ITEM 04</a>
-            </div>
-          </div>
-          <a href="#">SUPPORT</a>
-        </div>
-        <div class="nav-auth">
-            <RouterLink to="/userpage"><img src="/src/assets/pfp.png" class="userIMG" alt="User Image"></RouterLink>
-            <a href="#" class="sign-in" style= "font-weight: 900;">SIGN IN</a>
-            <a href="#" class="signup">SIGN UP FOR FREE</a>
-        </div>
-        <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
-
-    <div class="hero">
-        <HeroComponent/>
-    </div>    
-    <div class="destaque">
-        <DestaqueComponent />
-    </div>
-    <div class="new">
-        <NewProductsComponent/>
-    </div>
-    <div class="promo">
-        <PromoCardComponent/>
-    </div>
-    <div class="children">
-        <ChildrenComponent/>
-    </div>
-    <div calss="Comments">
-        <CommentsComponent/>
-    </div>
-    <div class="footer">
-        <FooterComponent />
-    </div>
-</body>
-    <RouterView />
-</template>
-
-<script>
-import UserComponent from './components/UserComponent.vue';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
 import FooterComponent from './components/FooterComponent.vue';
 import PromoCardComponent from './components/PromoCardComponent.vue';
 import DestaqueComponent from './components/DestaqueComponent.vue';
 import ChildrenComponent from './components/ChildrenComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
-import NewProductsComponent from "./components/NewProductsComponent.vue";
-import CommentsComponent from "./components/CommentsComponent.vue"
+import NewProductsComponent from './components/NewProductsComponent.vue';
+import CommentsComponent from './components/CommentsComponent.vue';
 
-export default {
-  components: {
-    UserComponent,
-    HeroComponent,
-    FooterComponent,
-    PromoCardComponent,
-    DestaqueComponent,
-    ChildrenComponent,
-    NewProductsComponent,
-    CommentsComponent
-  }
-};
 
+const route = useRoute();
 </script>
+
+<template>
+  <div>
+    <div v-if="route.path !== '/register' && route.path !== '/login'  && route.path !== '/user'">
+      <nav class="navbar">
+        <div class="container">
+          <div class="logo">
+            <img src="/src/assets/Logo_nav.png" alt="Logo" />
+          </div>
+          <div :class="['nav-links', { active: isMenuActive }]">
+            <a href="#">HOME</a>
+            <a href="#">SALE</a>
+            <a href="#">BUNDLE & SAVE</a>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle">SHOP BY CATEGORY ▼</a>
+              <div class="dropdown-content">
+                <a href="#">ITEM 01</a>
+                <a href="#">ITEM 02</a>
+                <a href="#">ITEM 03</a>
+                <a href="#">ITEM 04</a>
+              </div>
+            </div>
+            <a href="#">SUPPORT</a>
+          </div>
+          <div class="nav-auth">
+            <RouterLink to="/user"><img src="/src/assets/pfp.png" class="userIMG" alt="User Image"></RouterLink>
+            <RouterLink to="/login" class="sign-in" style="font-weight: 900;">SIGN IN</RouterLink>
+            <RouterLink to="/register" class="signup">SIGN UP FOR FREE</RouterLink>
+          </div>
+          <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <HeroComponent />
+      </div>
+      <div class="destaque">
+        <DestaqueComponent />
+      </div>
+      <div class="new">
+        <NewProductsComponent />
+      </div>
+      <div class="promo">
+        <PromoCardComponent />
+      </div>
+      <div class="children">
+        <ChildrenComponent />
+      </div>
+      <div class="Comments">
+        <CommentsComponent />
+      </div>
+      <div class="footer">
+        <FooterComponent />
+      </div>
+    </div>
+
+    <RouterView />
+  </div>
+</template>
 
 <style scoped>
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f5f5;
-}
+
 
 .navbar {
     width: 100%;
@@ -224,6 +208,11 @@ body {
     transform: scale(1.05); 
 }
 
+.userIMG{
+    width: 50px;
+    border-radius: 50%;
+}
+
 
 .menu-toggle {
     display: none;
@@ -281,11 +270,6 @@ body {
         text-align: center;
         padding: 20px 0;
     }
-}
-
-.userIMG{
-    width: 50px;
-    border-radius: 50%;
 }
 
 .menu-toggle.active span:nth-child(1) {
