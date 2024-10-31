@@ -5,7 +5,7 @@
             <div class="logo">
                 <img src="/src/assets/Logo_nav.png" alt="Logo" />
             </div>
-            <div class="nav-links">
+            <div :class="['nav-links', { active: isMenuActive }]">
                 <a href="#">HOME</a>
                 <a href="#">SALE</a>
                 <a href="#">BUNDLE & SAVE</a>
@@ -18,7 +18,12 @@
                         <a href="#">ITEM 04</a>
                     </div>
                 </div>
-            <a href="#">SUPPORT</a>
+                <a href="#">SUPPORT</a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         <div class="nav-auth">
@@ -28,6 +33,7 @@
         </div>
     </nav>
 </template>
+
 
 <style scoped>
 

@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RegisterPage from '@/components/RegisterPage.vue';
 import LoginPage from '@/components/LoginPage.vue';
-import UserComponent from '@/components/UserComponent.vue';
+import UserEditComponent from '@/components/UserEditComponent.vue';
+import UserFixedComponent from '@/components/UserFixedComponent.vue';
 
 
 
@@ -25,7 +26,12 @@ const routes = [
   {
     path: '/user',
     name: 'user',
-    component: UserComponent,
+    component: UserFixedComponent,
+  },
+  {
+    path: '/edit',
+    name: 'edit',
+    component: UserEditComponent,
   },
   {
     path: '/about',

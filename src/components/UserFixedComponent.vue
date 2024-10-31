@@ -6,9 +6,8 @@
             <div class="user-info1">
                 <h1>Gabriela Leal</h1>
                 <h3>Gabizinha</h3>
-                <input type="text" placeholder="Add a description...">
             </div>
-            <button class="input-img">Change Picture</button>
+            <RouterLink to="/edit" class="edit-btn">Edit Profile</RouterLink>
         </div>  
         <div class="personal-info">
             <h1>Personal</h1>
@@ -16,61 +15,61 @@
                 <div class="name-area">
                     <div class="object1">
                         <label>Name</label>
-                        <input class="label-input" type="text" placeholder="Gabriela">
+                        <input class="label-input" type="text" placeholder="Gabriela" disabled="">
                     </div>
                     <div class="object1">
                         <label>Last Name</label>
-                        <input class="label-input" type="text" placeholder="Leal">
+                        <input class="label-input" type="text" placeholder="Leal" disabled="">
                     </div>
                 </div>
                 <div class="phone-area">
                     <div class="object1">
                         <label>Mobile Phone</label>
-                        <input class="label-input" type="number" placeholder="(14) 99654-8247">
+                        <input class="label-input" type="number" placeholder="(14) 99654-8247" disabled="">
                     </div>
                     <div class="object1">
                         <label>Landline</label>
-                        <input class="label-input" type="number" placeholder="(14) 3003-4598">
+                        <input class="label-input" type="number" placeholder="(14) 3003-4598" disabled="">
                     </div>
                 </div>
             </div>
             <div class="object2">
                 <label>Date of Birth</label>
-                <input type="date" class="calendar" placeholder="22/04/2005">
+                <input type="text" class="calendar" placeholder="22/04/2005" disabled="">
             </div>
             <div class="object2">
                 <label>Address</label>
-                <input class="label-input" type="number" placeholder="CEP">
-                <input class="label-input" type="text" placeholder="City">
-                <input class="label-input" type="text" placeholder="Neighborhood">
-                <div class="last2">
-                    <input class="label-input" type="text" placeholder="Road">
-                    <input class="label-input" type="number" placeholder="Number">
-                </div>
+                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
+                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
             </div>
         </div>
         <div class="login">
             <h1>Login</h1>
             <div class="object3">
                 <label>E-mail</label>
-                <input class="label-input" type="email" placeholder="gabrielaleal@gmail.com">
+                <input class="label-input" type="email" placeholder="gabrielaleal@gmail.com" disabled="">
             </div>
             <div class="object3">
                 <label>Password</label>
-                <input class="label-input" type="password" placeholder="*********">
+                <input class="label-input" type="password" placeholder="*********" disabled="">
             </div>
         </div>
         <div class="card-info">
-            <h1>Card</h1>
-            <input type="number" class="card-input" placeholder="0000 0000 0000 0000">
-            <div class="last2">
-                <input type="text" placeholder="MM/YY">
-                <input type="number" placeholder="CVC">
+            <h1>Cards</h1>
+            <div class="credit-card">
+                <p>1234 5678 8765 4321</p><p> - </p>
+                <p>01/30</p><p> - </p>
+                <P>123</P>
             </div>
         </div>
-        <button type="submit" class="save-btn">Save</button>
     </div>
 </template>
+
+<script>
+import { RouterLink } from 'vue-router';
+
+
+</script>
 
 <style scoped>
 #app{
@@ -103,23 +102,20 @@
     font-weight: 500;
     color: grey;
 }
-.top-page input{
+.edit-btn{
     font-family: 'Inter', sans-serif;
-    border: solid 1px rgba(128, 128, 128, 0.445);
-    border-radius: 4px;
-    padding: 10px 13px;
-    width: 165%;
-}
-.top-page button{
-    font-family: 'Inter', sans-serif;
-    height: 4vw;
+    text-align: center;
+    text-decoration: none;
+    height: 3vw;
     margin-top: 2%;
     border:none;
     background-color: rgba(105, 135, 205, 1);
     color: white;
-    padding: 0% 1%;
+    padding: 0% 0.5%;
     font-weight: 700;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -177,6 +173,15 @@ label{
     margin-bottom: 2%;
     outline: none;
 }
+.adress{
+    font-family: 'Inter', sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+    background-color: rgba(105, 135, 205, 0.2);
+    padding: 2%;
+    border-radius: 4px;
+    margin-bottom: 1%;
+}
 .last2{
     max-width: 100%;
     display: flex;
@@ -233,13 +238,16 @@ label{
     font-size: 24px;
     font-weight: 600;
 }
-.card-info input{
+.credit-card{
     font-family: 'Inter', sans-serif;
-    border: solid 1px rgba(128, 128, 128, 0.445);
+    font-size: 2vh;
+    font-weight: 500;
+    background-color: rgba(105, 135, 205, 0.2);
+    padding: 2% 4%;
     border-radius: 4px;
-    padding: 10px 13px;
-    margin-bottom: 2%;
-    outline: none;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
 }
 
 

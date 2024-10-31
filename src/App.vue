@@ -9,7 +9,6 @@ import NewProductsComponent from './components/NewProductsComponent.vue';
 import CommentsComponent from './components/CommentsComponent.vue';
 import NavbarComponent from './components/NavbarComponent.vue';
 
-
 const route = useRoute();
 </script>
 
@@ -18,7 +17,7 @@ const route = useRoute();
     <NavbarComponent/>
   </div>
   <div>
-    <div v-if="route.path !== '/register' && route.path !== '/login'  && route.path !== '/user'">
+    <div v-if="route.path !== '/register' && route.path !== '/login'  && route.path !== '/user' && route.path !== '/edit'">
       
 
       <div class="hero">
