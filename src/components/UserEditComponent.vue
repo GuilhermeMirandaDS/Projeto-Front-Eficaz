@@ -77,11 +77,6 @@
         </div>
         <div class="card-info">
             <h1>Cards</h1>
-            <div class="credit-card">
-                <p>1234 5678 8765 4321</p><p> - </p>
-                <p>01/30</p><p> - </p>
-                <P>123</P>
-            </div>
             <button id="addCardBtn" class="addCardBtn">Add a new Card</button>
             <div id="modalCard" class="modal">
                 <div class="modalContent">
@@ -179,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     display: flex;
     align-items:first top;
     gap: 2%;
-    margin-top: 4%;
+    margin-top: 8%;
     max-height: fit-content;
     width: 100%;
     justify-content: center;
@@ -201,12 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 .top-page button{
     font-family: 'Inter', sans-serif;
-    height: 4vw;
+    height: 3vw;
     margin-top: 2%;
     border:none;
     background-color: rgba(105, 135, 205, 1);
     color: white;
-    padding: 0% 1%;
+    padding: 0% 0.5%;
     font-weight: 700;
     border-radius: 4px;
     cursor: pointer;
@@ -421,17 +416,6 @@ label{
     padding: 10px 13px;
     margin-bottom: 2%;
     outline: none;
-}
-.credit-card{
-    font-family: 'Inter', sans-serif;
-    font-size: 2vh;
-    font-weight: 500;
-    background-color: rgba(105, 135, 205, 0.2);
-    padding: 2% 4%;
-    border-radius: 4px;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: space-between;
 }
 .addCardBtn{
     font-family: 'Inter', sans-serif;

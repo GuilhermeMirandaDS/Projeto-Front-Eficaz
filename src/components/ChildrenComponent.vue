@@ -78,16 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .children-background {
     background-color: #f3f5f9;
-    width: 1400px;
-    height: 928px;
+    width: 100%;
     border-radius: 30px;
     margin: 0;
-    padding: 0;
+    padding: 5% 0%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 10vw;
 }
 
 .hp-img img{

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+</script>
+
 <template>
 
     <nav class="navbar">
@@ -6,7 +10,7 @@
                 <img src="/src/assets/Logo_nav.png" alt="Logo" />
             </div>
             <div :class="['nav-links', { active: isMenuActive }]">
-                <a href="#">HOME</a>
+                <RouterLink to="/" >HOME</RouterLink>
                 <a href="#">SALE</a>
                 <a href="#">BUNDLE & SAVE</a>
                 <div class="dropdown">
@@ -45,7 +49,10 @@
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    position: relative;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
 }
 
 .container {

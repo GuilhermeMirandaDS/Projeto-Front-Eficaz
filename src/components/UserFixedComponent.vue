@@ -57,9 +57,19 @@
         <div class="card-info">
             <h1>Cards</h1>
             <div class="credit-card">
-                <p>1234 5678 8765 4321</p><p> - </p>
-                <p>01/30</p><p> - </p>
-                <P>123</P>
+                <input type="text" class="adress" disabled="" value="1234 5678 8765 4321">
+                <div class="last2">
+                    <input type="text" class="adress" disabled="" value="01/30">
+                    <input type="text" class="adress" disabled="" value="123">
+                </div>
+            </div>
+
+            <div class="credit-card">
+                <input type="text" class="adress" disabled="" value="1234 5678 8765 4321">
+                <div class="last2">
+                    <input type="text" class="adress" disabled="" value="01/30">
+                    <input type="text" class="adress" disabled="" value="123">
+                </div>
             </div>
         </div>
     </div>
@@ -82,7 +92,7 @@ import { RouterLink } from 'vue-router';
     display: flex;
     align-items:first top;
     gap: 2%;
-    margin-top: 4%;
+    margin-top: 8%;
     max-height: fit-content;
     width: 100%;
     justify-content: center;
@@ -232,6 +242,7 @@ label{
     gap: 20%;
     max-height: fit-content;
     width: 36%;
+    margin-bottom: 2%;
 }
 .card-info h1{
     font-family: 'Inter', sans-serif;
@@ -242,12 +253,15 @@ label{
     font-family: 'Inter', sans-serif;
     font-size: 2vh;
     font-weight: 500;
-    background-color: rgba(105, 135, 205, 0.2);
-    padding: 2% 4%;
     border-radius: 4px;
-    margin-bottom: 1%;
+    margin-bottom: 8%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+.credit-card input{
+    border: none;
+    color: black;
 }
 
 

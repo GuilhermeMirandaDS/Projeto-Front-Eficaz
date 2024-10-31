@@ -110,6 +110,13 @@ export default {
 };
 </script>
 <style scoped>
+.heroSection{
+  margin-top: 5%;
+}
+
+h3, h4{
+  font-family: 'Inter', sans-serif;
+}
 
 @keyframes complexEntry {
   0% {

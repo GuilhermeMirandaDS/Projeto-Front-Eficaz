@@ -46,3 +46,13 @@ const route = useRoute();
     <RouterView />
   </div>
 </template>
+
+<style>
+.app{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
