@@ -42,7 +42,7 @@
   
             <div class="form-group">
               <input type="text" v-model="username" placeholder="Username" required />
-              <input type="text" v-model="username" placeholder="Email" required />
+              <input type="text" v-model="email" placeholder="Email" required />
   
               <div class="row">
                 <input type="password" v-model="password" placeholder="Password" required class="half-width" />
@@ -70,8 +70,13 @@
   </template>
   
   
-  <script>
-  export default {
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+  import axios from 'axios';
+  import api from '@/services/api';
+
+  export default defineComponent({
+    name: 'UserRegistration',
     data() {
       return {
         firstName: "",
@@ -82,30 +87,61 @@
         gender: "",
         cpf: "",
         username: "",
+        email:"",
         password: "",
         confirmPassword: "",
         securityQuestion: "",
         termsAgreed: false,
+        errorMessage: null as string | null,
+        successMessage: null as string | null,
       };
     },
     methods: {
-      submitForm() {
+      async submitForm() {
+        // Validações do formulário
         if (this.password !== this.confirmPassword) {
-          alert("Passwords do not match!");
+          this.errorMessage = "As senhas não correspondem!";
           return;
         }
-  
+
         if (!this.termsAgreed) {
-          alert("You must agree to the terms of use.");
+          this.errorMessage = "Você deve aceitar os termos de uso.";
           return;
         }
-  
-        alert("Formulário enviado com sucesso!");
-        
-        this.$router.push({ name: 'login' });
+
+        try {
+          // Enviar dados para a API
+          const response = await axios.post('https://localhost:7288/api/User/register', {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            dob: this.dob,
+            telefoneFixo: this.telefoneFixo,
+            celular: this.celular,
+            gender: this.gender,
+            cpf: this.cpf,
+            username: this.username,
+            email: this.email,
+            password: this.password,
+            confirmPassword: this.confirmPassword,
+            securityQuestion: this.securityQuestion,
+            thermsAgreed: this.thermsAgreed
+          });
+
+          // Limpa a mensagem de erro e exibe sucesso
+          this.successMessage = "Usuário registrado com sucesso!";
+          this.errorMessage = null;
+
+          // Redireciona para a página de login
+          this.$router.push({ name: 'login' });
+        } catch (error) {
+          // Exibe mensagem de erro
+          this.successMessage = null;
+          this.errorMessage = "Erro ao registrar usuário. Verifique os dados e tente novamente.";
+          console.error("Erro na requisição de cadastro:", error);
+        }
       },
     },
-  };
+  });
   </script>
   
   <style scoped>

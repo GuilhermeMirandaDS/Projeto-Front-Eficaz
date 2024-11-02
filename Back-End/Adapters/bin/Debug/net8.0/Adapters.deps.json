@@ -960,7 +960,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.1.2"
         },
         "runtime": {
-          "Core.dll": {}
+          "Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

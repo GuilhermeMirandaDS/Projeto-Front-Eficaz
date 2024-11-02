@@ -963,7 +963,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.1.2"
         },
         "runtime": {
-          "Adapters.dll": {}
+          "Adapters.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Application/1.0.0": {
@@ -977,7 +980,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.1.2"
         },
         "runtime": {
-          "Application.dll": {}
+          "Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Core/1.0.0": {
@@ -990,7 +996,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.1.2"
         },
         "runtime": {
-          "Core.dll": {}
+          "Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
