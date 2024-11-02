@@ -59,9 +59,9 @@
             const m = Math.floor(diff / 1000 / 60) % 60;
             const s = Math.floor(diff / 1000) % 60;
 
-            updateNumber(hours, h);
-            updateNumber(minutes, m);
-            updateNumber(seconds, s);
+            // updateNumber(hours, h);
+            // updateNumber(minutes, m);
+            // updateNumber(seconds, s);
         }
 
         // Função que executa a animação de alteração no temporizador

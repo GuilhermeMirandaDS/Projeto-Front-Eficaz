@@ -25,7 +25,11 @@
   </script>
   
   <style scoped>
+  *{
+    font-family: 'Inter', sans-serif;
+  }
   .container {
+    
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between; 

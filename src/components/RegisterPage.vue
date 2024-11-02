@@ -42,6 +42,7 @@
   
             <div class="form-group">
               <input type="text" v-model="username" placeholder="Username" required />
+              <input type="text" v-model="username" placeholder="Email" required />
   
               <div class="row">
                 <input type="password" v-model="password" placeholder="Password" required class="half-width" />

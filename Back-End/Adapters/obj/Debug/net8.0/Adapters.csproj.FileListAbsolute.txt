@@ -1,0 +1,17 @@
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Adapters.deps.json
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Adapters.runtimeconfig.json
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Adapters.dll
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Adapters.pdb
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Core.dll
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\bin\Debug\net8.0\Core.pdb
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.csproj.AssemblyReference.cache
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.AssemblyInfoInputs.cache
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.AssemblyInfo.cs
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.csproj.CoreCompileInputs.cache
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.csproj.CopyComplete
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.dll
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\refint\Adapters.dll
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.pdb
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\Adapters.genruntimeconfig.cache
+C:\Users\Aula\Downloads\LoginEficaz\Adapters\obj\Debug\net8.0\ref\Adapters.dll

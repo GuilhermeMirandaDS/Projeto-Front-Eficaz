@@ -7,11 +7,11 @@
                 <h1>Gabriela Leal</h1>
                 <h3>Gabizinha</h3>
             </div>
-            <button id="changeImg" class="input-img">Change Picture</button>
+            <button class="input-img" @click="openModalImg" >Change Picture</button>
             <div id="modalImage" class="modal">
                 <div class="modalContent">
                     <input class="inputPicture" type="file" accept="image/jpeg">
-                    <button type="submit" id="subBtn">Submit</button>
+                    <button type="submit" id="subBtn" @click="closeModalImg" >Submit</button>
                 </div>
             </div>
         </div>  
@@ -47,7 +47,7 @@
                 <label>Address</label>
                 <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
                 <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
-                <button id="add-btn">Add a new Adress</button>
+                <button id="add-btn" @click="openModalAdress">Add a new Adress</button>
                 <div id="modalAdress" class="modal">
                     <div class="modalContent">
                         <label>New Address</label>
@@ -58,8 +58,8 @@
                             <input class="label-input" type="text" placeholder="Road">
                             <input class="label-input" type="number" placeholder="Number">
                         </div>
-                        <button type="submit"class="saveBtn">Save</button>
-                        <button type="button" class="cancelBtn">Cancel</button>
+                        <button type="submit"class="saveBtn" @click="closeModalAdress">Save</button>
+                        <button type="button" class="cancelBtn" @click="closeModalAdress">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
         </div>
         <div class="card-info">
             <h1>Cards</h1>
-            <button id="addCardBtn" class="addCardBtn">Add a new Card</button>
+            <button id="addCardBtn" class="addCardBtn" @click="openModalCard">Add a new Card</button>
             <div id="modalCard" class="modal">
                 <div class="modalContent">
                     <label>Card</label>
@@ -86,8 +86,8 @@
                         <input type="text" placeholder="MM/YY">
                         <input type="number" placeholder="CVC">
                     </div>
-                    <button type="submit"class="savecardBtn">Save</button>
-                    <button type="button" class="cancelcardBtn">Cancel</button>
+                    <button type="submit"class="savecardBtn" @click="closeModalCard">Save</button>
+                    <button type="button" class="cancelcardBtn" @click="closeModalCard">Cancel</button>
                 </div>
             </div>
         </div>
@@ -100,67 +100,35 @@
 
 import { RouterLink } from 'vue-router';
 
-document.addEventListener('DOMContentLoaded', () => {
+export default {
+    methods: {
+        openModalImg() {
+            document.getElementById("modalImage").style.display = "block";
+        },
+
+        closeModalImg() {
+            document.getElementById("modalImage").style.display = "none";
+        },
 
 
-// MODAL ADRESS
 
-    var modal = document.getElementById("modalAdress");
-    var btn = document.getElementById("add-btn");
-    var save = document.getElementsByClassName("saveBtn")[0];
-    var cancel = document.getElementsByClassName("cancelBtn")[0];
+        openModalAdress() {
+            document.getElementById("modalAdress").style.display = "block";
+        },
+        closeModalAdress() {
+            document.getElementById("modalAdress").style.display = "none";
+        },
 
-    btn.onclick = function() {
-        modal.style.display = "block";
+
+        openModalCard() {
+            document.getElementById("modalCard").style.display = "block";
+        },
+        closeModalCard() {
+            document.getElementById("modalCard").style.display = "none";
+        }
     }
+}
 
-    save.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    cancel.onclick = function() {
-        modal.style.display = "none";
-    }
-
-// MODAL PROFILE PICTURE
-
-    var modalImg = document.getElementById("modalImage");
-    var btnImg = document.getElementById("changeImg");
-    var subBtn = document.getElementById("subBtn");
-
-    btnImg.onclick = function() {
-        modalImg.style.display = "block";
-    }
-
-    subBtn.onclick = function() {
-        modalImg.style.display = "none";
-    }
-
-    window.onclick = function(event2) {
-    if (event2.target == modalImg) {
-        modalImg.style.display = "none";
-    }
-    }
-
-// MODAL CREDIT CARD
-
-    var modal3 = document.getElementById("modalCard");
-    var addCard = document.getElementById("addCardBtn");
-    var saveCard = document.getElementsByClassName("savecardBtn")[0];
-    var cancelCard = document.getElementsByClassName("cancelcardBtn")[0];
-
-    addCard.onclick = function() {
-        modal3.style.display = "block";
-    }
-
-    saveCard.onclick = function() {
-        modal3.style.display = "none";
-    }
-
-    cancelCard.onclick = function() {
-        modal3.style.display = "none";
-    }
-});
 </script>
 
 <style scoped>
@@ -466,6 +434,7 @@ label{
 .back-btn{
     font-family: 'Inter', sans-serif;
     text-align: center;
+    text-decoration: none;
     font-size: 14px;
     border: none;
     border-radius: 4px;

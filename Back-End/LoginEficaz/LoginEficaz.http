@@ -1,0 +1,6 @@
+@LoginEficaz_HostAddress = http://localhost:5120
+
+GET {{LoginEficaz_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -72,6 +72,9 @@
 </script>
 
 <style scoped>
+*{
+  font-family: 'Inter', sans-serif;
+}
 .footer {
   position: relative;
   background-color: #000;
