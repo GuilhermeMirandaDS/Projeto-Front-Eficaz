@@ -1,4 +1,5 @@
 ﻿using LoginEficaz.Core.DTOs;
+using LoginEficaz.Core.Entities;
 
 namespace LoginEficaz.Core.Ports
 {
@@ -7,5 +8,6 @@ namespace LoginEficaz.Core.Ports
         Task RegisterUser(RegisterUserDTO registerUser);
         Task<string> AuthenticateUser(LoginUserDTO loginUser);
         Task UpdateUserProfile(Guid userId, UpdateProfileDTO updateProfile);
+        Task<User> GetUserById(Guid userId);
     }
 }

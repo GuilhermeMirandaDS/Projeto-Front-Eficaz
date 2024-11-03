@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\core\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|solutionrelative:logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\logineficaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|solutionrelative:logineficaz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\back-end\\adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Core\\Entities\\User.cs",
+              "RelativeToolTip": "Core\\Entities\\User.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T02:14:20.668Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UpdateProfileDTO.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Core\\DTOs\\UpdateProfileDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\UpdateProfileDTO.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Core\\DTOs\\UpdateProfileDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\UpdateProfileDTO.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T02:13:40.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\LoginEficaz\\appsettings.json",
               "RelativeDocumentMoniker": "LoginEficaz\\appsettings.json",
@@ -34,12 +67,11 @@
               "RelativeToolTip": "LoginEficaz\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-01T21:32:38.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T21:32:38.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\LoginEficaz\\Program.cs",
               "RelativeDocumentMoniker": "LoginEficaz\\Program.cs",
@@ -47,18 +79,17 @@
               "RelativeToolTip": "LoginEficaz\\Program.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAABIAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T21:31:04.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T21:31:04.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Adapters\\Primary\\API\\UserController.cs",
               "RelativeDocumentMoniker": "Adapters\\Primary\\API\\UserController.cs",
               "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Back-End\\Adapters\\Primary\\API\\UserController.cs",
               "RelativeToolTip": "Adapters\\Primary\\API\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAqwDQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T21:16:58.036Z",
               "EditorCaption": ""

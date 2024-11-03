@@ -38,5 +38,17 @@ namespace LoginEficaz.Adapters.Primary.API
             await _userService.UpdateUserProfile(Guid.Parse(userId), updateProfile);
             return Ok("Profile updated successfully");
         }
+        [HttpGet("profile")]
+        [Authorize]
+        public async Task<IActionResult> GetUser()
+        {
+            var userId = User.FindFirst("id")?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("User not authenticated");
+
+            var user = await _userService.GetUserById(Guid.Parse(userId));
+            return Ok(user);
+        }
     }
 }

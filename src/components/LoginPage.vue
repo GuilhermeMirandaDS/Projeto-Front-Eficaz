@@ -51,7 +51,12 @@ import { RouterLink, RouterView } from 'vue-router';
   </template>
   
   <script>
-  export default {
+  import { defineComponent } from 'vue';
+  import axios from 'axios';
+  import api from '@/services/api';
+
+  export default defineComponent({
+    name:'UserLogin',
     data() {
       return {
         username: '',
@@ -59,11 +64,23 @@ import { RouterLink, RouterView } from 'vue-router';
       };
     },
     methods: {
-      submitForm() {
-        console.log(`Username: ${this.username}, Password: ${this.password}`);
+      async submitForm() {
+        try {
+          const response = await axios.post('https://localhost:7288/api/User/login', {
+            username: this.username,
+            password: this.password
+          });
+
+          const token = response.data.token;
+          
+          window.localStorage.setItem("AUTH_TOKEN", token);
+          this.$router.push({ name: 'home' });
+        } catch (error) {
+          console.error("Erro na requisição de login:", error);
+        }
       }
     }
-  };
+  });
   </script>
   
   <style scoped>

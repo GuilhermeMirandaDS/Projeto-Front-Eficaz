@@ -83,7 +83,14 @@ namespace LoginEficaz.Application.Services
 
             await _userRepository.UpdateUser(user);
         }
+        public async Task<User> GetUserById(Guid userId)
+        {
+            var user = await _userRepository.GetUserById(userId);
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
 
+            return user;
+        }
         private string HashPassword(string password)
         {
             return BCrypt.Net.BCrypt.HashPassword(password);

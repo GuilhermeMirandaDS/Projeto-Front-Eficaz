@@ -1,11 +1,11 @@
 <template>
 
-    <div id="app">
-        <div class="top-page">
+    <form @submit.prevent="updateUserData" id="app">
+        <form @submit.prevent="updateUserData" class="top-page">
             <img src="../assets/pfp.png" alt="user-pic" class="user-img">
             <div class="user-info1">
-                <h1>Gabriela Leal</h1>
-                <h3>Gabizinha</h3>
+                <h1>{{ userData.firstName }}</h1>
+                <h3>{{ userData.username }}</h3>
             </div>
             <button class="input-img" @click="openModalImg" >Change Picture</button>
             <div id="modalImage" class="modal">
@@ -14,34 +14,34 @@
                     <button type="submit" id="subBtn" @click="closeModalImg" >Submit</button>
                 </div>
             </div>
-        </div>  
+        </form>  
         <div class="personal-info">
             <h1>Personal</h1>
             <div class="name-phone">
                 <div class="name-area">
                     <div class="object1">
                         <label>Name</label>
-                        <input class="label-input" type="text" placeholder="Gabriela">
+                        <input class="label-input" type="text" v-model="userData.firstName" placeholder="Gabriela">
                     </div>
                     <div class="object1">
                         <label>Last Name</label>
-                        <input class="label-input" type="text" placeholder="Leal">
+                        <input class="label-input" type="text" v-model="userData.lastName" placeholder="Leal">
                     </div>
                 </div>
                 <div class="phone-area">
                     <div class="object1">
                         <label>Mobile Phone</label>
-                        <input class="label-input" type="number" placeholder="(14) 99654-8247" maxlength="11">
+                        <input class="label-input" type="number" v-model="userData.celular" placeholder="(14) 99654-8247" maxlength="11">
                     </div>
                     <div class="object1">
                         <label>Landline</label>
-                        <input class="label-input" type="number" placeholder="(14) 3003-4598" maxlength="11">
+                        <input class="label-input" type="number" v-model="userData.telefoneFixo" placeholder="(14) 3003-4598" maxlength="11">
                     </div>
                 </div>
             </div>
             <div class="object2">
                 <label>Date of Birth</label>
-                <input type="date" class="calendar" placeholder="22/04/2005">
+                <input type="date" class="calendar" v-model="userData.dob" placeholder="22/04/2005">
             </div>
             <div class="add-adress">
                 <label>Address</label>
@@ -51,13 +51,22 @@
                 <div id="modalAdress" class="modal">
                     <div class="modalContent">
                         <label>New Address</label>
+                        <!-- <div v-for="(endereco, index) in userData.addresses" :key="index"> -->
+                            <!-- <input class="label-input" type="number" v-model="endereco.zipcode" placeholder="CEP">
+                            <input class="label-input" type="text" v-model="endereco.city" placeholder="City">
+                            <input class="label-input" type="text" v-model="endereco.neighborhood" placeholder="Neighborhood">
+                            <div class="last2-modal">
+                                <input class="label-input" type="text" v-model="endereco.street" placeholder="Road">
+                                <input class="label-input" type="number" v-model="endereco.number" placeholder="Number">
+                            </div> -->
+                        <!-- </div> -->
                         <input class="label-input" type="number" placeholder="CEP">
-                        <input class="label-input" type="text" placeholder="City">
-                        <input class="label-input" type="text" placeholder="Neighborhood">
-                        <div class="last2-modal">
-                            <input class="label-input" type="text" placeholder="Road">
-                            <input class="label-input" type="number" placeholder="Number">
-                        </div>
+                            <input class="label-input" type="text" placeholder="City">
+                            <input class="label-input" type="text" placeholder="Neighborhood">
+                            <div class="last2-modal">
+                                <input class="label-input" type="text" placeholder="Road">
+                                <input class="label-input" type="number" placeholder="Number">
+                            </div>
                         <button type="submit"class="saveBtn" @click="closeModalAdress">Save</button>
                         <button type="button" class="cancelBtn" @click="closeModalAdress">Cancel</button>
                     </div>
@@ -68,11 +77,11 @@
             <h1>Login</h1>
             <div class="object3">
                 <label>E-mail</label>
-                <input class="label-input" type="email" placeholder="gabrielaleal@gmail.com">
+                <input class="label-input" type="email" v-model="userData.email" placeholder="gabrielaleal@gmail.com">
             </div>
             <div class="object3">
                 <label>Password</label>
-                <input class="label-input" type="password" placeholder="*********">
+                <input class="label-input" type="password" v-model="userData.password" placeholder="*********">
             </div>
         </div>
         <div class="card-info">
@@ -81,53 +90,142 @@
             <div id="modalCard" class="modal">
                 <div class="modalContent">
                     <label>Card</label>
+                    <!-- <div v-for="(cartao, index) in userData.creditCards" :key="index"> -->
+                        <div class="last2-modal">
+                            <!-- <input type="text" v-model="cartao.expiryDate" placeholder="MM/YY"> -->
+                            <input type="text" placeholder="MM/YY">
+                            <!-- <input type="number" v-model="cartao.cvc" placeholder="CVC"> -->
+                            <input type="number" placeholder="CVC">
+                        </div>
+                    <!-- </div> -->
+                    <!-- <input type="number" class="card-input" v-model="cartao.cardNumber" placeholder="0000 0000 0000 0000"> -->
                     <input type="number" class="card-input" placeholder="0000 0000 0000 0000">
-                    <div class="last2-modal">
-                        <input type="text" placeholder="MM/YY">
-                        <input type="number" placeholder="CVC">
-                    </div>
                     <button type="submit"class="savecardBtn" @click="closeModalCard">Save</button>
                     <button type="button" class="cancelcardBtn" @click="closeModalCard">Cancel</button>
                 </div>
             </div>
         </div>
-        <button type="submit" class="save-btn">Save</button>
+        <button type="submit" class="save-btn" @click="updateUserData">Save</button>
         <RouterLink to="/user" class="back-btn">Return to Profile</RouterLink>
-    </div>
+    </form>
 </template>
 
-<script>
+<script lang="ts">
 
+import axios from 'axios';
 import { RouterLink } from 'vue-router';
-
-export default {
-    methods: {
-        openModalImg() {
-            document.getElementById("modalImage").style.display = "block";
-        },
-
-        closeModalImg() {
-            document.getElementById("modalImage").style.display = "none";
-        },
+import { onMounted, ref, defineComponent } from 'vue';
+import api from "@/services/api";
 
 
+export default defineComponent ({
+    name: "userProfileEdit",
+    setup() {
+        const userData = ref({
+            firstName: "",
+            lastName: "",
+            dob: "",
+            telefoneFixo: "",
+            celular: "",
+            email:"",
+            password: "",
+            username: "",
+            addresses: [ {
+                street: "",
+                number: "",
+                city: "",
+                neighborhood: "",
+                zipcode: ""
+            }
+            ],
+            creditCards: [{
+                cardNumber: "",
+                expiryDate: "",
+                cvc: ""
+            }]
+        });
 
-        openModalAdress() {
-            document.getElementById("modalAdress").style.display = "block";
-        },
-        closeModalAdress() {
-            document.getElementById("modalAdress").style.display = "none";
-        },
+        const getUserData = async () => {
+            try {
+
+                const token = localStorage.getItem('AUTH_TOKEN');
+                console.log("Token JWT:", token);
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                const response = await axios.get('https://localhost:7288/api/User/profile', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                userData.value = response.data;
 
 
-        openModalCard() {
-            document.getElementById("modalCard").style.display = "block";
-        },
-        closeModalCard() {
-            document.getElementById("modalCard").style.display = "none";
+            } catch (error) {
+                console.error('Erro ao buscar os dados do usuário:', error);
+            }
+        };
+
+        const updateUserData = async () => {
+            try {
+                const token = localStorage.getItem('AUTH_TOKEN');
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                const response = await axios.put('https://localhost:7288/api/User/profile', userData.value, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                console.log('Dados atualizados com sucesso:', response.data);
+                alert('Dados atualizados com sucesso!');
+
+            } catch (error) {
+                console.error('Erro ao atualizar os dados do usuário:', error);
+            }
+        };
+
+        onMounted(getUserData);
+
+        return {
+            userData,
+            updateUserData
+        };
+    },
+        
+
+        methods: {
+            openModalImg() {
+                document.getElementById("modalImage")!.style.display = "block";
+            },
+
+            closeModalImg() {
+                document.getElementById("modalImage")!.style.display = "none";
+            },
+
+
+
+            openModalAdress() {
+                document.getElementById("modalAdress")!.style.display = "block";
+            },
+            closeModalAdress() {
+                document.getElementById("modalAdress")!.style.display = "none";
+            },
+
+
+            openModalCard() {
+                document.getElementById("modalCard")!.style.display = "block";
+            },
+            closeModalCard() {
+                document.getElementById("modalCard")!.style.display = "none";
+            },
         }
-    }
-}
+
+});
 
 </script>
 

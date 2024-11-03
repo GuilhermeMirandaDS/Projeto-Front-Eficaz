@@ -1,43 +1,43 @@
 <template>
 
-    <div id="app">
+    <div v-if="userData" id="app">
         <div class="top-page">
-            <img v-if="imageUrl" :src="imageUrl" alt="user-pic" class="user-img"/>
-            <!-- <img src="../assets/pfp.png" alt="user-pic" class="user-img"/> -->
+            <!-- <img v-if="imageUrl" :src="imageUrl" alt="user-pic" class="user-img"/> -->
+            <img src="../assets/pfp.png" alt="user-pic" class="user-img"/>
 
             <div class="user-info1">
-                <h1>{{ userData.name }}</h1>
-                <h3>{{ userData.nickname }}</h3>
+                <h1>{{ userData.firstName }}</h1>
+                <h3>{{ userData.username }}</h3>
                 <!-- <h1>Gabriela Leal</h1>
                 <h3>Gabizinha</h3> -->
             </div>
             <RouterLink to="/edit" class="edit-btn">Edit Profile</RouterLink>
-        </div>  
+        </div>
         <div class="personal-info">
             <h1>Personal</h1>
             <div class="name-phone">
                 <div class="name-area">
                     <div class="object1">
                         <label>Name</label>
-                        <input class="label-input" type="text" :placeholder="userData ? userData.FirstName : 'name'" disabled="">
+                        <input class="label-input" type="text" :placeholder="userData ? userData.firstName : 'name'" disabled="">
                         <!-- <input class="label-input" type="text" placeholder="Gabriela" disabled=""> -->
 
                     </div>
                     <div class="object1">
                         <label>Last Name</label>
-                        <input class="label-input" type="text" :placeholder="userData ? userData.LastName : 'last name'" disabled="">
+                        <input class="label-input" type="text" :placeholder="userData ? userData.lastName : 'last name'" disabled="">
                         <!-- <input class="label-input" type="text" placeholder="Leal" disabled=""> -->
                     </div>
                 </div>
                 <div class="phone-area">
                     <div class="object1">
                         <label>Mobile Phone</label>
-                        <input class="label-input" type="number" :placeholder="userData ? userData.PhoneMobile : '(00) 00000-0000'" disabled="">
+                        <input class="label-input" type="number" :placeholder="userData ? userData.celular : '(00) 00000-0000'" disabled="">
                         <!-- <input class="label-input" type="number" placeholder="(00) 0000-0000" disabled=""> -->
                     </div>
                     <div class="object1">
                         <label>Landline</label>
-                        <input class="label-input" type="number" :placeholder="userData ? userData.PhoneFix : '(00) 0000-0000'" disabled="">
+                        <input class="label-input" type="number" :placeholder="userData ? userData.telefoneFixo : '(00) 0000-0000'" disabled="">
                         <!-- <input class="label-input" type="number" placeholder="(00) 0000-0000" disabled=""> -->
                     </div>
                 </div>
@@ -45,25 +45,24 @@
             <div class="object2">
                 <label>Date of Birth</label>
                 <!-- <input type="text" class="calendar" placeholder="14/05/2003" disabled=""> -->
-                <input type="text" class="calendar" :placeholder="userData ? userData.DoB : 'dd/MM/yyyy'" disabled="">
+                <input type="text" class="calendar" :placeholder="userData ? userData.dob : 'dd/MM/yyyy'" disabled="">
             </div>
             <div class="object2">
                 <label>Address</label>
-                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
-                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
+                <p class="adress">Rua teste, 1001 · (14) 2105-4000</p>
             </div>
         </div>
         <div class="login">
             <h1>Login</h1>
             <div class="object3">
                 <label>E-mail</label>
-                <input class="label-input" type="email" :placeholder="userData ? userData.Email : 'Email'" disabled="">
+                <input class="label-input" type="email" :placeholder="userData ? userData.email : 'Email'" disabled="">
                 <!-- <input class="label-input" type="email" placeholder="Email" disabled=""> -->
             </div>
             <div class="object3">
                 <label>Password</label>
-                <input class="label-input" type="password" :placeholder="userData ? userData.Password : 'Password'" disabled="">
-                <!-- <input class="label-input" type="password" placeholder="******" disabled=""> -->
+                <!-- <input class="label-input" type="password" :placeholder="userData ? userData.Password : 'Password'" disabled=""> -->
+                <input class="label-input" type="password" placeholder="******" disabled="">
 
             </div>
         </div>
@@ -76,56 +75,59 @@
                     <input type="text" class="adress" disabled="" value="123">
                 </div>
             </div>
-
-            <div class="credit-card">
-                <input type="text" class="adress" disabled="" value="1234 5678 8765 4321">
-                <div class="last2">
-                    <input type="text" class="adress" disabled="" value="01/30">
-                    <input type="text" class="adress" disabled="" value="123">
-                </div>
-            </div>
         </div>
     </div>
+    <div class="else" v-else><p>Carregando dados do Usuário...</p></div>
+
 </template>
 
 <script>
+import axios from 'axios';
 import { RouterLink } from 'vue-router';
 import { onMounted, ref, defineComponent } from 'vue';
 import api from "@/services/api";
 
-// export default defineComponent({
-//     name: "userProfile",
-//     setup(props) {
-//         const token = window.localStorage.getItem("AUTH_TOKEN");
-//         const userData = ref<any>(null);
-//         const imageUrl = ref<string | null>(null);
+export default defineComponent({
+    name: "userProfile",
+    setup() {
+        const userData = ref(null);
 
-//         const getUserData = async () => {
-//             try {
+        const getUserData = async () => {
+            try {
+
+                const token = localStorage.getItem('AUTH_TOKEN');
+                console.log("Token JWT:", token);
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                const response = await axios.get('https://localhost:7288/api/User/profile', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                userData.value = response.data;
 
 
-//                 const response = await axios.get(api,'/${token}', { responseType: 'blob' });
-//                 userData.value = response.data;
-                
+            } catch (error) {
+                console.error('Erro ao buscar os dados do usuário:', error);
+            }
+        };
 
-//                 imageUrl.value = URL.createObjectURL(userData.value);
+        onMounted(() => {
+            getUserData();
+        });
 
-
-//             } catch (error) {
-//                 console.error('Erro ao buscar os dados do usuário:', error);
-//             }
-//         };
-
-//         onMounted(() => {
-//             getUserData();
-//         });
-
-//         return { userData, imageUrl };
-//     }
-// });
+        return { userData };
+    }
+});
 </script>
 
 <style scoped>
+.else{
+    text-align: center;
+    margin-top: 25%;
+}
 #app{
     display: flex;
     flex-direction: column;
