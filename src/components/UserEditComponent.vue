@@ -186,6 +186,7 @@ export default defineComponent ({
 
             } catch (error) {
                 console.error('Erro ao atualizar os dados do usuário:', error);
+                alert('erro ao atualizar dados!');
             }
         };
 

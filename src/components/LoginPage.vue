@@ -43,7 +43,7 @@ import { RouterLink, RouterView } from 'vue-router';
           </div>
           
           <div class="signup-link">
-            <p>Not a member? <a href="#">Sign up.</a></p>
+            <p>Not a member? <RouterLink to="/register">Sign up.</RouterLink></p>
           </div>
         </div>
       </div>
@@ -77,6 +77,7 @@ import { RouterLink, RouterView } from 'vue-router';
           this.$router.push({ name: 'home' });
         } catch (error) {
           console.error("Erro na requisição de login:", error);
+          alert("Informações inválidas!");
         }
       }
     }
@@ -89,7 +90,7 @@ import { RouterLink, RouterView } from 'vue-router';
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   
   #app {
     font-family: 'Inter', sans-serif;
