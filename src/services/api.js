@@ -12,6 +12,9 @@ api.interceptors.request.use((config) => {
     if(isAuthenticated) {
         config.headers["Authorization"] = `Bearer ${Token}`;
     }
+    else{
+        window.location.href = "/login";
+    }
 
     return config;
 });

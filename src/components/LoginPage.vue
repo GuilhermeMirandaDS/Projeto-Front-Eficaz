@@ -73,7 +73,7 @@ import { RouterLink, RouterView } from 'vue-router';
 
           const token = response.data.token;
           
-          window.localStorage.setItem("AUTH_TOKEN", token);
+          window.sessionStorage.setItem("AUTH_TOKEN", token);
           this.$router.push({ name: 'home' });
         } catch (error) {
           console.error("Erro na requisição de login:", error);

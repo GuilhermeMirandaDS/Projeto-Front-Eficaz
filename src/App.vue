@@ -8,7 +8,19 @@ import HeroComponent from './components/HeroComponent.vue';
 import NewProductsComponent from './components/NewProductsComponent.vue';
 import CommentsComponent from './components/CommentsComponent.vue';
 import NavbarComponent from './components/NavbarComponent.vue';
+import router from '@/router/index.js';
 
+const checkAuth = async() => {
+  const token = localStorage.getItem('AUTH_TOKEN');
+  console.log("Token JWT:", token);
+  if (!token) {
+      router.push("/login");                
+      throw new Error('Token não encontrado!');
+  }
+
+};
+
+checkAuth();
 const route = useRoute();
 </script>
 

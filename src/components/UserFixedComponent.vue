@@ -83,7 +83,7 @@
 
 <script>
 import axios from 'axios';
-import { RouterLink } from 'vue-router';
+import router from '@/router/index.js';
 import { onMounted, ref, defineComponent } from 'vue';
 import api from "@/services/api";
 
@@ -95,9 +95,10 @@ export default defineComponent({
         const getUserData = async () => {
             try {
 
-                const token = localStorage.getItem('AUTH_TOKEN');
+                const token = sessionStorage.getItem('AUTH_TOKEN');
                 console.log("Token JWT:", token);
                 if (!token) {
+                    router.push("/login");                
                     throw new Error('Token não encontrado!');
                 }
 
