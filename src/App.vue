@@ -9,6 +9,7 @@ import NewProductsComponent from './components/NewProductsComponent.vue';
 import CommentsComponent from './components/CommentsComponent.vue';
 import NavbarComponent from './components/NavbarComponent.vue';
 import router from '@/router/index.js';
+import BestSellers from './components/BestSellers.vue';
 
 const checkAuth = async() => {
   const token = localStorage.getItem('AUTH_TOKEN');
@@ -35,9 +36,9 @@ const route = useRoute();
       <div class="hero">
         <HeroComponent />
       </div>
-      <div class="destaque">
-        <DestaqueComponent />
-      </div>
+     <div class="Best_Seller">
+        <BestSellers/>
+     </div>
       <div class="new">
         <NewProductsComponent />
       </div>
