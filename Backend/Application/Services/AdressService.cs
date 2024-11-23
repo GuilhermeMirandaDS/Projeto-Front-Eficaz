@@ -1,71 +1,82 @@
 ﻿using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Entities;
 using LoginEficaz.Core.Ports;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace LoginEficaz.Application.Services
 {
     public class AddressService : IAddressService
     {
-        private readonly List<Address> _addresses = new();
+        private readonly IAddressRepository _addressRepository;
+        private readonly IUserRepository _userRepository;
 
-        public IEnumerable<AddressDTO> GetAll()
+        public AddressService(IAddressRepository addressRepository, IUserRepository userRepository)
         {
-            return _addresses.Select(a => new AddressDTO
+            _addressRepository = addressRepository;
+            _userRepository = userRepository;
+        }
+
+        public async Task<List<AddressDTO>> GetAddressByUser(Guid userId)
+        {
+            var user = await _userRepository.GetUserById(userId);
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
+
+            var addresses = await _addressRepository.GetAddressesByUserId(userId);
+            var addressDTOs = addresses.Select(a => new AddressDTO
             {
+                Id = a.Id,
                 Street = a.Street,
                 Number = a.Number,
                 Neighborhood = a.Neighborhood,
                 City = a.City,
-                ZipCode = a.ZipCode
-            });
+                ZipCode = a.ZipCode,
+                UserId = a.UserId
+            }).ToList();
+
+            return addressDTOs;
         }
 
-        public AddressDTO GetById(int id)
+        public async Task RegisterAddress(AddressDTO addressDto)
         {
-            var address = _addresses.FirstOrDefault(a => a.Id == id);
-            return address == null ? null : new AddressDTO
+            var user = await _userRepository.GetUserById(addressDto.UserId);
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
+
+            var address = new Address
             {
-                Street = address.Street,
-                Number = address.Number,
-                Neighborhood = address.Neighborhood,
-                City = address.City,
-                ZipCode = address.ZipCode
+                UserId = addressDto.UserId,
+                Street = addressDto.Street,
+                Number = addressDto.Number,
+                Neighborhood = addressDto.Neighborhood,
+                City = addressDto.City,
+                ZipCode = addressDto.ZipCode
             };
+
+            await _addressRepository.RegisterAddress(address);
         }
 
-        public void Create(AddressDTO address)
+        public async Task<bool> UpdateAddress(AddressDTO addressDto)
         {
-            _addresses.Add(new Address
+            var address = new Address
             {
-                Id = _addresses.Count + 1,
-                Street = address.Street,
-                Number = address.Number,
-                Neighborhood = address.Neighborhood,
-                City = address.City,
-                ZipCode = address.ZipCode
-            });
+                Id = addressDto.Id,
+                UserId = addressDto.UserId,
+                Street = addressDto.Street,
+                Number = addressDto.Number,
+                Neighborhood = addressDto.Neighborhood,
+                City = addressDto.City,
+                ZipCode = addressDto.ZipCode
+            };
+
+            return await _addressRepository.UpdateAddress(address);
         }
 
-        public bool Update(AddressDTO address)
+        public async Task<bool> DeleteAddress(int id)
         {
-            var existing = _addresses.FirstOrDefault(a => a.Id == address.Id);
-            if (existing == null) return false;
-
-            existing.Street = address.Street;
-            existing.Number = address.Number;
-            existing.Neighborhood = address.Neighborhood;
-            existing.City = address.City;
-            existing.ZipCode = address.ZipCode;
-            return true;
-        }
-
-        public bool Delete(int id)
-        {
-            var address = _addresses.FirstOrDefault(a => a.Id == id);
-            if (address == null) return false;
-
-            _addresses.Remove(address);
-            return true;
+            return await _addressRepository.DeleteAddress(id);
         }
     }
 }

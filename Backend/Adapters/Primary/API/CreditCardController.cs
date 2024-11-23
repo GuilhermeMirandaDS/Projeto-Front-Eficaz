@@ -2,6 +2,7 @@
 using LoginEficaz.Core.Ports;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace LoginEficaz.Adapters.Primary.API
 {
@@ -17,35 +18,35 @@ namespace LoginEficaz.Adapters.Primary.API
             _service = service;
         }
 
-        [HttpGet]
-        public IActionResult GetAll() => Ok(_service.GetAll());
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetCreditCardByUserId(Guid userId)
         {
-            var result = _service.GetById(id);
+            var result = await _service.GetCreditCardByUser(userId);
             if (result == null) return NotFound();
             return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult Create(CreditCardDTO dto)
+        public async Task<IActionResult> RegisterCreditCard(CreditCardDTO dto)
         {
-            _service.Create(dto);
-            return CreatedAtAction(nameof(GetById), new { id = dto.CardNumber }, dto);
+            await _service.RegisterCreditCard(dto);
+            return CreatedAtAction(nameof(GetCreditCardByUserId), new { userId = dto.UserId }, dto);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, CreditCardDTO dto)
+        public async Task<IActionResult> UpdateCreditCard(int id, CreditCardDTO dto)
         {
-            if (!_service.Update(dto)) return NotFound();
+            dto.Id = id;
+            var updated = await _service.UpdateCreditCard(dto);
+            if (!updated) return NotFound();
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> DeleteCreditCard(int id)
         {
-            if (!_service.Delete(id)) return NotFound();
+            var deleted = await _service.DeleteCreditCard(id);
+            if (!deleted) return NotFound();
             return NoContent();
         }
     }

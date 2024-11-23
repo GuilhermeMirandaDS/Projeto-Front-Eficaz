@@ -4300,11 +4300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\ebper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Core\\obj\\",
+      "outputPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ebper\\AppData\\Roaming\\NuGet\\NuGet.Config",

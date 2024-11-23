@@ -6,22 +6,27 @@ namespace LoginEficaz.Application.Services
 {
     public class BrandService : IBrandService
     {
-        private readonly List<Brand> _brands = new List<Brand>();
+        private readonly IBrandRepository _brandRepository;
 
-        public IEnumerable<BrandDTO> GetAllBrands()
+        public BrandService(IBrandRepository brandRepository)
         {
-            return _brands.Select(b => new BrandDTO
+            _brandRepository = brandRepository;
+        }
+
+        public async Task<List<BrandDTO>> GetAllBrands()
+        {
+            var brands = await _brandRepository.GetAllBrands();
+            return brands.Select(b => new BrandDTO
             {
                 BrandId = b.BrandId,
                 BrandName = b.BrandName
-            });
+            }).ToList();
         }
 
-        public BrandDTO GetBrandById(int id)
+        public async Task<BrandDTO> GetBrandById(int id)
         {
-            var brand = _brands.FirstOrDefault(b => b.BrandId == id);
-            if (brand == null) return null;
-
+            var brand = await _brandRepository.GetBrandById(id);
+            if (brand == null) throw new KeyNotFoundException("Brand not found");
             return new BrandDTO
             {
                 BrandId = brand.BrandId,
@@ -29,32 +34,31 @@ namespace LoginEficaz.Application.Services
             };
         }
 
-        public void AddBrand(BrandDTO brandDto)
+        public async Task AddBrand(BrandDTO brandDto)
+        {
+            var brand = new Brand
+            {
+                BrandName = brandDto.BrandName
+            };
+
+            await _brandRepository.AddBrand(brand);
+        }
+
+        public async Task UpdateBrand(BrandDTO brandDto)
         {
             var brand = new Brand
             {
                 BrandId = brandDto.BrandId,
                 BrandName = brandDto.BrandName
             };
-            _brands.Add(brand);
+
+            await _brandRepository.UpdateBrand(brand);
         }
 
-        public void UpdateBrand(BrandDTO brandDto)
+        public async Task DeleteBrand(int id)
         {
-            var brand = _brands.FirstOrDefault(b => b.BrandId == brandDto.BrandId);
-            if (brand != null)
-            {
-                brand.BrandName = brandDto.BrandName;
-            }
-        }
-
-        public void DeleteBrand(int id)
-        {
-            var brand = _brands.FirstOrDefault(b => b.BrandId == id);
-            if (brand != null)
-            {
-                _brands.Remove(brand);
-            }
+            await _brandRepository.DeleteBrand(id);
         }
     }
 }
+

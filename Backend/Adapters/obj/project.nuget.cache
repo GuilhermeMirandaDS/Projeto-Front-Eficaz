@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "baGf2eXrZL0=",
+  "dgSpecHash": "+WHixAJv9wA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Adapters\\Adapters.csproj",
+  "projectFilePath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Adapters.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ebper\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ebper\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

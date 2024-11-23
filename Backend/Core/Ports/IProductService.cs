@@ -4,10 +4,11 @@ namespace LoginEficaz.Core.Ports
 {
     public interface IProductService
     {
-        IEnumerable<ProductDTO> GetAllProducts();
-        ProductDTO GetProductById(int id);
-        void AddProduct(ProductDTO product);
-        void UpdateProduct(ProductDTO product);
-        void DeleteProduct(int id);
+        Task<List<ProductDTO>> GetAllProducts();
+        Task<ProductDTO> GetProductById(int id);
+        Task<List<ProductDTO>> GetProductsByBrandId(int brandId);
+        Task RegisterProduct(ProductDTO product);
+        Task UpdateProduct(ProductDTO product);
+        Task DeleteProduct(int id);
     }
 }

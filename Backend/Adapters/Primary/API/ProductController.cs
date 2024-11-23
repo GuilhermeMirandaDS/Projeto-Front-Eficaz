@@ -1,6 +1,10 @@
 ﻿using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Ports;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 
 namespace LoginEficaz.Adapters.Primary.API
 {
@@ -8,45 +12,56 @@ namespace LoginEficaz.Adapters.Primary.API
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
-        private readonly IProductService _productService;
+        private readonly IProductService _service;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService service)
         {
-            _productService = productService;
+            _service = service;
         }
 
         [HttpGet]
-        public IActionResult GetAllProducts()
+        public async Task<IActionResult> GetAllProducts()
         {
-            return Ok(_productService.GetAllProducts());
+            var result = await _service.GetAllProducts();
+            if (result == null || result.Count == 0) return NotFound();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetProductById(int id)
+        public async Task<IActionResult> GetProductById(int id)
         {
-            var product = _productService.GetProductById(id);
-            if (product == null) return NotFound();
-            return Ok(product);
+            var result = await _service.GetProductById(id);
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
+
+        [HttpGet("brand/{brandId}")]
+        public async Task<IActionResult> GetProductsByBrandId(int brandId)
+        {
+            var result = await _service.GetProductsByBrandId(brandId);
+            if (result == null || result.Count == 0) return NotFound();
+            return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult AddProduct(ProductDTO productDto)
+        public async Task<IActionResult> Create(ProductDTO dto)
         {
-            _productService.AddProduct(productDto);
-            return CreatedAtAction(nameof(GetProductById), new { id = productDto.ProdId }, productDto);
+            await _service.RegisterProduct(dto);
+            return CreatedAtAction(nameof(GetProductById), new { id = dto.ProdId }, dto);
         }
 
-        [HttpPut]
-        public IActionResult UpdateProduct(ProductDTO productDto)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, ProductDTO dto)
         {
-            _productService.UpdateProduct(productDto);
+            dto.ProdId = id;
+            await _service.UpdateProduct(dto);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteProduct(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _productService.DeleteProduct(id);
+            await _service.DeleteProduct(id);
             return NoContent();
         }
     }

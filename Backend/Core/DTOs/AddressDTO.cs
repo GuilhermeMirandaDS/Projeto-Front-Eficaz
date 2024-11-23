@@ -7,6 +7,7 @@
         public string Number { get; set; }
         public string Neighborhood { get; set; }
         public string City { get; set; }
-        public string ZipCode { get; set; } 
+        public string ZipCode { get; set; }
+        public Guid UserId { get; set; }
     }
 }

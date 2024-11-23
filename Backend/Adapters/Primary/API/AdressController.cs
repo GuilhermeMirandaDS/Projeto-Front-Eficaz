@@ -2,6 +2,9 @@
 using LoginEficaz.Core.Ports;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 
 namespace LoginEficaz.Adapters.Primary.API
 {
@@ -17,35 +20,35 @@ namespace LoginEficaz.Adapters.Primary.API
             _service = service;
         }
 
-        [HttpGet]
-        public IActionResult GetAll() => Ok(_service.GetAll());
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetAddressByUserId(Guid userId)
         {
-            var result = _service.GetById(id);
-            if (result == null) return NotFound();
+            var result = await _service.GetAddressByUser(userId);
+            if (result == null || result.Count == 0) return NotFound();
             return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult Create(AddressDTO dto)
+        public async Task<IActionResult> RegisterAddress(AddressDTO dto)
         {
-            _service.Create(dto);
-            return CreatedAtAction(nameof(GetById), new { id = dto.ZipCode }, dto);
+            await _service.RegisterAddress(dto);
+            return CreatedAtAction(nameof(GetAddressByUserId), new { userId = dto.UserId }, dto);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, AddressDTO dto)
+        public async Task<IActionResult> UpdateAddress(int id, AddressDTO dto)
         {
-            if (!_service.Update(dto)) return NotFound();
+            dto.Id = id;
+            var updated = await _service.UpdateAddress(dto);
+            if (!updated) return NotFound();
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> DeleteAddress(int id)
         {
-            if (!_service.Delete(id)) return NotFound();
+            var deleted = await _service.DeleteAddress(id);
+            if (!deleted) return NotFound();
             return NoContent();
         }
     }

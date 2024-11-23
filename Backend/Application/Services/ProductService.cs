@@ -1,76 +1,95 @@
-﻿using LoginEficaz.Core.DTOs;
+﻿
+using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Entities;
 using LoginEficaz.Core.Ports;
+using LoginEficaz.Adapters.Secondary.Infra.Data.Repositories;
 
 namespace LoginEficaz.Application.Services
 {
     public class ProductService : IProductService
     {
-        private readonly List<Product> _products = new List<Product>();
+        private readonly IProductRepository _productRepository;
+        private readonly IBrandRepository _brandRepository;
 
-        public IEnumerable<ProductDTO> GetAllProducts()
+        public ProductService(IProductRepository productRepository, IBrandRepository brandRepository)
         {
-            return _products.Select(p => new ProductDTO
+            _productRepository = productRepository;
+            _brandRepository = brandRepository;
+        }
+
+        public async Task<List<ProductDTO>> GetAllProducts()
+        {
+            var products = await _productRepository.GetAllProducts();
+            return products.Select(p => new ProductDTO
             {
                 ProdId = p.ProdId,
                 ProdName = p.ProdName,
-                Brand = p.Brand,
-                Price = p.Price,
                 Description = p.Description,
-                ImageUrl = p.ImageUrl
-            });
+                Price = p.Price,
+                BrandId = p.BrandId
+            }).ToList();
         }
 
-        public ProductDTO GetProductById(int id)
+        public async Task<ProductDTO> GetProductById(int id)
         {
-            var product = _products.FirstOrDefault(p => p.ProdId == id);
-            if (product == null) return null;
-
+            var product = await _productRepository.GetProductById(id);
+            if (product == null) throw new KeyNotFoundException("Product not found");
             return new ProductDTO
             {
                 ProdId = product.ProdId,
                 ProdName = product.ProdName,
-                Brand = product.Brand,
-                Price = product.Price,
                 Description = product.Description,
-                ImageUrl = product.ImageUrl
+                Price = product.Price,
+                BrandId = product.BrandId
             };
         }
 
-        public void AddProduct(ProductDTO productDto)
+        public async Task<List<ProductDTO>> GetProductsByBrandId(int brandId)
+        {
+            var products = await _productRepository.GetProductsByBrandId(brandId);
+            return products.Select(p => new ProductDTO
+            {
+                ProdId = p.ProdId,
+                ProdName = p.ProdName,
+                Description = p.Description,
+                Price = p.Price,
+                BrandId = p.BrandId
+            }).ToList();
+        }
+
+        public async Task RegisterProduct(ProductDTO productDto)
+        {
+            var brand = await _brandRepository.GetBrandById(productDto.BrandId);
+            if (brand == null) throw new KeyNotFoundException("Brand not found");
+
+            var product = new Product
+            {
+                ProdName = productDto.ProdName,
+                Description = productDto.Description,
+                Price = productDto.Price,
+                BrandId = productDto.BrandId
+            };
+
+            await _productRepository.RegisterProduct(product);
+        }
+
+        public async Task UpdateProduct(ProductDTO productDto)
         {
             var product = new Product
             {
                 ProdId = productDto.ProdId,
                 ProdName = productDto.ProdName,
-                Brand = productDto.Brand,
-                Price = productDto.Price,
                 Description = productDto.Description,
-                ImageUrl = productDto.ImageUrl
+                Price = productDto.Price,
+                BrandId = productDto.BrandId
             };
-            _products.Add(product);
+
+            await _productRepository.UpdateProduct(product);
         }
 
-        public void UpdateProduct(ProductDTO productDto)
+        public async Task DeleteProduct(int id)
         {
-            var product = _products.FirstOrDefault(p => p.ProdId == productDto.ProdId);
-            if (product != null)
-            {
-                product.ProdName = productDto.ProdName;
-                product.Brand = productDto.Brand;
-                product.Price = productDto.Price;
-                product.Description = productDto.Description;
-                product.ImageUrl = productDto.ImageUrl;
-            }
-        }
-
-        public void DeleteProduct(int id)
-        {
-            var product = _products.FirstOrDefault(p => p.ProdId == id);
-            if (product != null)
-            {
-                _products.Remove(product);
-            }
+            await _productRepository.DeleteProduct(id);
         }
     }
 }

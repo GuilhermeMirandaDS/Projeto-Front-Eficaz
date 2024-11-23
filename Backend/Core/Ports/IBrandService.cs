@@ -4,10 +4,10 @@ namespace LoginEficaz.Core.Ports
 {
     public interface IBrandService
     {
-        IEnumerable<BrandDTO> GetAllBrands();
-        BrandDTO GetBrandById(int id);
-        void AddBrand(BrandDTO brand);
-        void UpdateBrand(BrandDTO brand);
-        void DeleteBrand(int id);
+        Task<List<BrandDTO>> GetAllBrands();
+        Task<BrandDTO> GetBrandById(int id);
+        Task AddBrand(BrandDTO brand);
+        Task UpdateBrand(BrandDTO brand);
+        Task DeleteBrand(int id);
     }
 }

@@ -1,63 +1,77 @@
 ﻿using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Entities;
 using LoginEficaz.Core.Ports;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using LoginEficaz.Adapters.Secondary.Infra.Data.Repositories;
 
 namespace LoginEficaz.Application.Services
 {
     public class CreditCardService : ICreditCardService
     {
-        private readonly List<CreditCard> _creditCards = new();
+        private readonly ICreditCardRepository _creditCardRepository;
+        private readonly IUserRepository _userRepository;
 
-        public IEnumerable<CreditCardDTO> GetAll()
+        public CreditCardService(ICreditCardRepository creditCardRepository, IUserRepository userRepository)
         {
-            return _creditCards.Select(c => new CreditCardDTO
+            _creditCardRepository = creditCardRepository;
+            _userRepository = userRepository;
+        }
+
+        public async Task<List<CreditCardDTO>> GetCreditCardByUser(Guid userId)
+        {
+            var user = await _userRepository.GetUserById(userId);
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
+
+            var creditCards = await _creditCardRepository.GetCreditCardsByUserId(userId);
+            var creditCardDTOs = creditCards.Select(c => new CreditCardDTO
             {
+                Id = c.Id,
                 CardNumber = c.CardNumber,
                 ExpiryDate = c.ExpiryDate,
-                CVC = c.CVC
-            });
+                CVC = c.CVC,
+                UserId = c.UserId
+            }).ToList();
+
+            return creditCardDTOs;
         }
 
-        public CreditCardDTO GetById(int id)
+        public async Task RegisterCreditCard(CreditCardDTO creditCardDto)
         {
-            var creditCard = _creditCards.FirstOrDefault(c => c.Id == id);
-            return creditCard == null ? null : new CreditCardDTO
+            var user = await _userRepository.GetUserById(creditCardDto.UserId);
+            if (user == null)
+                throw new KeyNotFoundException("User not found");
+
+            var creditCard = new CreditCard
             {
-                CardNumber = creditCard.CardNumber,
-                ExpiryDate = creditCard.ExpiryDate,
-                CVC = creditCard.CVC
+                UserId = creditCardDto.UserId,
+                CardNumber = creditCardDto.CardNumber,
+                ExpiryDate = creditCardDto.ExpiryDate,
+                CVC = creditCardDto.CVC
             };
+
+            await _creditCardRepository.RegisterCreditCard(creditCard);
         }
 
-        public void Create(CreditCardDTO creditCard)
+        public async Task<bool> UpdateCreditCard(CreditCardDTO creditCardDto)
         {
-            _creditCards.Add(new CreditCard
+            var creditCard = new CreditCard
             {
-                Id = _creditCards.Count + 1,
-                CardNumber = creditCard.CardNumber,
-                ExpiryDate = creditCard.ExpiryDate,
-                CVC = creditCard.CVC
-            });
+                Id = creditCardDto.Id,
+                UserId = creditCardDto.UserId,
+                CardNumber = creditCardDto.CardNumber,
+                ExpiryDate = creditCardDto.ExpiryDate,
+                CVC = creditCardDto.CVC
+            };
+
+            return await _creditCardRepository.UpdateCreditCard(creditCard);
         }
 
-        public bool Update(CreditCardDTO creditCard)
+        public async Task<bool> DeleteCreditCard(int id)
         {
-            var existing = _creditCards.FirstOrDefault(c => c.Id == creditCard.Id);
-            if (existing == null) return false;
-
-            existing.CardNumber = creditCard.CardNumber;
-            existing.ExpiryDate = creditCard.ExpiryDate;
-            existing.CVC = creditCard.CVC;
-            return true;
-        }
-
-        public bool Delete(int id)
-        {
-            var creditCard = _creditCards.FirstOrDefault(c => c.Id == id);
-            if (creditCard == null) return false;
-
-            _creditCards.Remove(creditCard);
-            return true;
+            return await _creditCardRepository.DeleteCreditCard(id);
         }
     }
 }

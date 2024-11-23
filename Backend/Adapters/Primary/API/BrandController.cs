@@ -1,6 +1,10 @@
 ﻿using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Ports;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 
 namespace LoginEficaz.Adapters.Primary.API
 {
@@ -8,45 +12,48 @@ namespace LoginEficaz.Adapters.Primary.API
     [Route("api/[controller]")]
     public class BrandController : ControllerBase
     {
-        private readonly IBrandService _brandService;
+        private readonly IBrandService _service;
 
-        public BrandController(IBrandService brandService)
+        public BrandController(IBrandService service)
         {
-            _brandService = brandService;
+            _service = service;
         }
 
         [HttpGet]
-        public IActionResult GetAllBrands()
+        public async Task<IActionResult> GetAllBrands()
         {
-            return Ok(_brandService.GetAllBrands());
+            var result = await _service.GetAllBrands();
+            if (result == null || result.Count == 0) return NotFound();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBrandById(int id)
+        public async Task<IActionResult> GetBrandById(int id)
         {
-            var brand = _brandService.GetBrandById(id);
-            if (brand == null) return NotFound();
-            return Ok(brand);
+            var result = await _service.GetBrandById(id);
+            if (result == null) return NotFound();
+            return Ok(result);
         }
 
         [HttpPost]
-        public IActionResult AddBrand(BrandDTO brandDto)
+        public async Task<IActionResult> AddBrand(BrandDTO dto)
         {
-            _brandService.AddBrand(brandDto);
-            return CreatedAtAction(nameof(GetBrandById), new { id = brandDto.BrandId }, brandDto);
+            await _service.AddBrand(dto);
+            return CreatedAtAction(nameof(GetBrandById), new { id = dto.BrandId }, dto);
         }
 
-        [HttpPut]
-        public IActionResult UpdateBrand(BrandDTO brandDto)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBrand(int id, BrandDTO dto)
         {
-            _brandService.UpdateBrand(brandDto);
+            dto.BrandId = id;
+            await _service.UpdateBrand(dto);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteBrand(int id)
+        public async Task<IActionResult> DeleteBrand(int id)
         {
-            _brandService.DeleteBrand(id);
+            await _service.DeleteBrand(id);
             return NoContent();
         }
     }

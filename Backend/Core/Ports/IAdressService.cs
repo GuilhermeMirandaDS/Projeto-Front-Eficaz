@@ -4,10 +4,9 @@ namespace LoginEficaz.Core.Ports
 {
     public interface IAddressService
     {
-        IEnumerable<AddressDTO> GetAll();
-        AddressDTO GetById(int id);
-        void Create(AddressDTO address);
-        bool Update(AddressDTO address);
-        bool Delete(int id);
+        Task<List<AddressDTO>> GetAddressByUser(Guid userId);
+        Task RegisterAddress(AddressDTO address);
+        Task<bool> UpdateAddress(AddressDTO address);
+        Task<bool> DeleteAddress(int id);
     }
 }

@@ -4324,11 +4324,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Adapters\\Adapters.csproj",
+      "projectUniqueName": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Adapters.csproj",
       "projectName": "Adapters",
-      "projectPath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Adapters\\Adapters.csproj",
+      "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Adapters.csproj",
       "packagesPath": "C:\\Users\\ebper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Adapters\\obj\\",
+      "outputPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ebper\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4346,8 +4346,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\ebper\\Downloads\\P2\\Projeto-Eficaz\\Backend\\Core\\Core.csproj"
+            "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj"
             }
           }
         }

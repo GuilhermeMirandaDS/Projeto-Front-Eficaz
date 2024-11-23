@@ -1,17 +1,7 @@
 [
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
-    "Method": "GetAll",
-    "RelativePath": "api/Address",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
-    "Method": "Create",
+    "Method": "RegisterAddress",
     "RelativePath": "api/Address",
     "HttpMethod": "POST",
     "IsController": true,
@@ -27,23 +17,7 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
-    "Method": "GetById",
-    "RelativePath": "api/Address/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
-    "Method": "Update",
+    "Method": "UpdateAddress",
     "RelativePath": "api/Address/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -64,7 +38,7 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
-    "Method": "Delete",
+    "Method": "DeleteAddress",
     "RelativePath": "api/Address/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -73,6 +47,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginEficaz.Adapters.Primary.API.AddressController",
+    "Method": "GetAddressByUserId",
+    "RelativePath": "api/Address/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -97,23 +87,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "brandDto",
-        "Type": "LoginEficaz.Core.DTOs.BrandDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.BrandController",
-    "Method": "UpdateBrand",
-    "RelativePath": "api/Brand",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "brandDto",
+        "Name": "dto",
         "Type": "LoginEficaz.Core.DTOs.BrandDTO",
         "IsRequired": true
       }
@@ -138,6 +112,27 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.BrandController",
+    "Method": "UpdateBrand",
+    "RelativePath": "api/Brand/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "LoginEficaz.Core.DTOs.BrandDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginEficaz.Adapters.Primary.API.BrandController",
     "Method": "DeleteBrand",
     "RelativePath": "api/Brand/{id}",
     "HttpMethod": "DELETE",
@@ -154,17 +149,7 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
-    "Method": "GetAll",
-    "RelativePath": "api/CreditCard",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
-    "Method": "Create",
+    "Method": "RegisterCreditCard",
     "RelativePath": "api/CreditCard",
     "HttpMethod": "POST",
     "IsController": true,
@@ -180,23 +165,7 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
-    "Method": "GetById",
-    "RelativePath": "api/CreditCard/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
-    "Method": "Update",
+    "Method": "UpdateCreditCard",
     "RelativePath": "api/CreditCard/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -217,7 +186,7 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
-    "Method": "Delete",
+    "Method": "DeleteCreditCard",
     "RelativePath": "api/CreditCard/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -226,6 +195,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginEficaz.Adapters.Primary.API.CreditCardController",
+    "Method": "GetCreditCardByUserId",
+    "RelativePath": "api/CreditCard/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -243,30 +228,14 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.ProductController",
-    "Method": "AddProduct",
+    "Method": "Create",
     "RelativePath": "api/Product",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productDto",
-        "Type": "LoginEficaz.Core.DTOs.ProductDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LoginEficaz.Adapters.Primary.API.ProductController",
-    "Method": "UpdateProduct",
-    "RelativePath": "api/Product",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "productDto",
+        "Name": "dto",
         "Type": "LoginEficaz.Core.DTOs.ProductDTO",
         "IsRequired": true
       }
@@ -291,7 +260,28 @@
   },
   {
     "ContainingType": "LoginEficaz.Adapters.Primary.API.ProductController",
-    "Method": "DeleteProduct",
+    "Method": "Update",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "LoginEficaz.Core.DTOs.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginEficaz.Adapters.Primary.API.ProductController",
+    "Method": "Delete",
     "RelativePath": "api/Product/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -299,6 +289,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginEficaz.Adapters.Primary.API.ProductController",
+    "Method": "GetProductsByBrandId",
+    "RelativePath": "api/Product/brand/{brandId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandId",
         "Type": "System.Int32",
         "IsRequired": true
       }

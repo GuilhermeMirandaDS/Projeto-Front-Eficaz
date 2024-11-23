@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Secondary\Infra.Auth\" />
     <Folder Include="Secondary\Infra.Data\Context\" />
-    <Folder Include="Secondary\Infra.Data\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
