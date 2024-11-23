@@ -1,10 +1,8 @@
 ﻿using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Ports;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using LoginEficaz.Core.Entities;
 
 namespace LoginEficaz.Adapters.Primary.API
 {
@@ -48,6 +46,30 @@ namespace LoginEficaz.Adapters.Primary.API
         {
             await _service.RegisterProduct(dto);
             return CreatedAtAction(nameof(GetProductById), new { id = dto.ProdId }, dto);
+        }
+
+        [HttpPost("{ProductId}/UploadImage")]
+        public async Task<ActionResult<string>> UploadImage(int ProductId, IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest("No image found");
+            }
+
+            using var memoryStream = new MemoryStream();
+            await file.CopyToAsync(memoryStream);
+
+            var fileData = new FileData
+            {
+                FileName = file.FileName,
+                Content = memoryStream.ToArray(),
+                ContentType = file.ContentType,
+                Extension = Path.GetExtension(file.FileName),
+            };
+
+            string imageUrl = await _service.UploadProductImage(ProductId, fileData);
+
+            return CreatedAtAction(nameof(UploadImage), imageUrl);
         }
 
         [HttpPut("{id}")]

@@ -636,3 +636,4 @@ C:\Users\ebper\Downloads\Projeto-Front-Eficaz\Backend\LoginEficaz\obj\Debug\net8
 C:\Users\ebper\Downloads\Projeto-Front-Eficaz\Backend\LoginEficaz\obj\Debug\net8.0\LoginEfi.DE0F5BF1.Up2Date
 C:\Users\ebper\Downloads\Projeto-Front-Eficaz\Backend\LoginEficaz\obj\Debug\net8.0\LoginEficaz.genruntimeconfig.cache
 C:\Users\ebper\Downloads\Projeto-Front-Eficaz\Backend\LoginEficaz\obj\Debug\net8.0\ref\LoginEficaz.dll
+C:\Users\ebper\Downloads\Projeto-Front-Eficaz\Backend\LoginEficaz\bin\Debug\net8.0\LoginEficaz.staticwebassets.runtime.json

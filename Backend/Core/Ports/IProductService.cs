@@ -1,4 +1,5 @@
 ﻿using LoginEficaz.Core.DTOs;
+using LoginEficaz.Core.Entities;
 
 namespace LoginEficaz.Core.Ports
 {
@@ -7,6 +8,7 @@ namespace LoginEficaz.Core.Ports
         Task<List<ProductDTO>> GetAllProducts();
         Task<ProductDTO> GetProductById(int id);
         Task<List<ProductDTO>> GetProductsByBrandId(int brandId);
+        public Task<string> UploadProductImage(int prodId, FileData file);
         Task RegisterProduct(ProductDTO product);
         Task UpdateProduct(ProductDTO product);
         Task DeleteProduct(int id);

@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "CM1fV13zQJ8tEQD53kLjoWP1N3z282ZW3g5RoVnAdTk=",
+  "Hash": "jvbs9FKrLZd+z23QNI+MllkeUmknSUM/00CwwEhsceI=",
   "Source": "LoginEficaz",
   "BasePath": "_content/LoginEficaz",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "LoginEficaz\\wwwroot",
+      "Source": "LoginEficaz",
+      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "BasePath": "_content/LoginEficaz",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
+      "SourceId": "LoginEficaz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "BasePath": "_content/LoginEficaz",
+      "RelativePath": "products/prodId.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\products\\prodId.jpeg"
+    }
+  ]
 }

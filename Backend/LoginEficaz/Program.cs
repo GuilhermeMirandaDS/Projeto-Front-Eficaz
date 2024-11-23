@@ -1,3 +1,4 @@
+using Infrastructure.Services;
 using LoginEficaz.Adapters.Secondary.Infra.Auth;
 using LoginEficaz.Adapters.Secondary.Infra.Data.Context;
 using LoginEficaz.Adapters.Secondary.Infra.Data.Repositories;
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICreditCardService, CreditCardService>();

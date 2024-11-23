@@ -12,5 +12,6 @@ namespace LoginEficaz.Core.Ports
         Task RegisterProduct(Product product);
         Task UpdateProduct(Product product);
         Task DeleteProduct(int id);
+        Task UpdateImage();
     }
 }

@@ -53,5 +53,9 @@ namespace LoginEficaz.Adapters.Secondary.Infra.Data.Repositories
             _dbContext.Products.Remove(product);
             await _dbContext.SaveChangesAsync();
         }
+        public async Task UpdateImage()
+        {
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

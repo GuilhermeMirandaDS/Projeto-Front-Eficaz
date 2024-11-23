@@ -3,6 +3,7 @@ using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Entities;
 using LoginEficaz.Core.Ports;
 using LoginEficaz.Adapters.Secondary.Infra.Data.Repositories;
+using Infrastructure.Services;
 
 namespace LoginEficaz.Application.Services
 {
@@ -10,11 +11,13 @@ namespace LoginEficaz.Application.Services
     {
         private readonly IProductRepository _productRepository;
         private readonly IBrandRepository _brandRepository;
+        private readonly IImageService _imageService;
 
-        public ProductService(IProductRepository productRepository, IBrandRepository brandRepository)
+        public ProductService(IProductRepository productRepository, IBrandRepository brandRepository, IImageService imageService)
         {
             _productRepository = productRepository;
             _brandRepository = brandRepository;
+            _imageService = imageService;
         }
 
         public async Task<List<ProductDTO>> GetAllProducts()
@@ -55,6 +58,19 @@ namespace LoginEficaz.Application.Services
                 Price = p.Price,
                 BrandId = p.BrandId
             }).ToList();
+        }
+
+        public async Task<string> UploadProductImage(int prodId, FileData file)
+        {
+            ProductDTO productDto = await GetProductById(prodId);
+
+            string uploadedFileUrl = await _imageService.UploadImage(file, "products", $"prod{prodId}");
+
+            productDto.ImageUrl = uploadedFileUrl;
+
+            await _productRepository.UpdateImage();
+
+            return uploadedFileUrl;
         }
 
         public async Task RegisterProduct(ProductDTO productDto)

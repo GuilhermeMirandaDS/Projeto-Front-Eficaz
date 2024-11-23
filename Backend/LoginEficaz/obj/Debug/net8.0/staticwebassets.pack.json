@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
+      "PackagePath": "staticwebassets\\products\\prodId.jpeg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoginEficaz.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.LoginEficaz.props",
+      "PackagePath": "build\\LoginEficaz.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LoginEficaz.props",
+      "PackagePath": "buildMultiTargeting\\LoginEficaz.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.LoginEficaz.props",
+      "PackagePath": "buildTransitive\\LoginEficaz.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
