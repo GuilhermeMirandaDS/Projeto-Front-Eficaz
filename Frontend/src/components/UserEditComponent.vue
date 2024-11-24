@@ -2,8 +2,10 @@
 
     <form @submit.prevent="updateUserData" id="app">
         <form @submit.prevent="updateUserData" class="top-page">
-            <img src="../assets/pfp.png" alt="user-pic" class="user-img">
+            <img :src="`https://localhost:7288/${userData.imageUrl}`" class="user-img" v-if="userData.imageUrl"/>
+            <p v-else> sem imagem </p>
             <div class="user-info1">
+                <img src=".../" alt="">
                 <h1>{{ userData.firstName }}</h1>
                 <h3>{{ userData.username }}</h3>
             </div>
@@ -11,7 +13,7 @@
             <div id="modalImage" class="modal">
                 <div class="modalContent">
                     <input class="inputPicture" type="file" accept="image/jpeg">
-                    <button type="submit" id="subBtn" @click="closeModalImg" >Submit</button>
+                    <button type="submit" id="subBtn" @click="closeModalImg(); updateUserImg();" >Submit</button>
                 </div>
             </div>
         </form>  
@@ -45,27 +47,16 @@
             </div>
             <div class="add-adress">
                 <label>Address</label>
-                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
-                <p class="adress">Av. Higino Muzi Filho, 1001 · (14) 2105-4000</p>
                 <button id="add-btn" @click="openModalAdress">Add a new Adress</button>
                 <div id="modalAdress" class="modal">
                     <div class="modalContent">
                         <label>New Address</label>
-                        <!-- <div v-for="(endereco, index) in userData.addresses" :key="index"> -->
-                            <!-- <input class="label-input" type="number" v-model="endereco.zipcode" placeholder="CEP">
-                            <input class="label-input" type="text" v-model="endereco.city" placeholder="City">
-                            <input class="label-input" type="text" v-model="endereco.neighborhood" placeholder="Neighborhood">
+                            <input class="label-input" type="number" v-model="userAdressData.zipCode" placeholder="CEP">
+                            <input class="label-input" type="text" v-model="userAdressData.city" placeholder="City">
+                            <input class="label-input" type="text" v-model="userAdressData.neighborhood" placeholder="Neighborhood">
                             <div class="last2-modal">
-                                <input class="label-input" type="text" v-model="endereco.street" placeholder="Road">
-                                <input class="label-input" type="number" v-model="endereco.number" placeholder="Number">
-                            </div> -->
-                        <!-- </div> -->
-                        <input class="label-input" type="number" placeholder="CEP">
-                            <input class="label-input" type="text" placeholder="City">
-                            <input class="label-input" type="text" placeholder="Neighborhood">
-                            <div class="last2-modal">
-                                <input class="label-input" type="text" placeholder="Road">
-                                <input class="label-input" type="number" placeholder="Number">
+                                <input class="label-input" type="text" v-model="userAdressData.street" placeholder="Road">
+                                <input class="label-input" type="number" v-model="userAdressData.number" placeholder="Number">
                             </div>
                         <button type="submit"class="saveBtn" @click="closeModalAdress">Save</button>
                         <button type="button" class="cancelBtn" @click="closeModalAdress">Cancel</button>
@@ -80,8 +71,12 @@
                 <input class="label-input" type="email" v-model="userData.email" placeholder="gabrielaleal@gmail.com">
             </div>
             <div class="object3">
+                <label>Username</label>
+                <input class="label-input" type="text" v-model="userData.username" placeholder="gabrielaleal@gmail.com">
+            </div>
+            <div class="object3">
                 <label>Password</label>
-                <input class="label-input" type="password" v-model="userData.password" placeholder="*********">
+                <input class="label-input" type="text" placeholder="*********" disabled="">
             </div>
         </div>
         <div class="card-info">
@@ -89,18 +84,13 @@
             <button id="addCardBtn" class="addCardBtn" @click="openModalCard">Add a new Card</button>
             <div id="modalCard" class="modal">
                 <div class="modalContent">
-                    <label>Card</label>
-                    <!-- <div v-for="(cartao, index) in userData.creditCards" :key="index"> -->
-                        <div class="last2-modal">
-                            <!-- <input type="text" v-model="cartao.expiryDate" placeholder="MM/YY"> -->
-                            <input type="text" placeholder="MM/YY">
-                            <!-- <input type="number" v-model="cartao.cvc" placeholder="CVC"> -->
-                            <input type="number" placeholder="CVC">
-                        </div>
-                    <!-- </div> -->
-                    <!-- <input type="number" class="card-input" v-model="cartao.cardNumber" placeholder="0000 0000 0000 0000"> -->
-                    <input type="number" class="card-input" placeholder="0000 0000 0000 0000">
-                    <button type="submit"class="savecardBtn" @click="closeModalCard">Save</button>
+                    <label>New Card</label>
+                    <div class="last2-modal">
+                        <input type="datetime" v-model="userCardData.expiryDate" placeholder="MM/YY">
+                        <input type="number" v-model="userCardData.cvc" placeholder="CVC">
+                    </div>
+                    <input type="number" class="card-input" v-model="userCardData.cardNumber" placeholder="0000 0000 0000 0000">
+                    <button type="submit"class="savecardBtn" @click="closeModalCard(); updateCardData();">Save</button>
                     <button type="button" class="cancelcardBtn" @click="closeModalCard">Cancel</button>
                 </div>
             </div>
@@ -122,34 +112,38 @@ export default defineComponent ({
     name: "userProfileEdit",
     setup() {
         const userData = ref({
+            id: "",
             firstName: "",
             lastName: "",
             dob: "",
             telefoneFixo: "",
             celular: "",
             email:"",
+            imageUrl: "",
             password: "",
             username: "",
-            addresses: [ {
-                street: "",
-                number: "",
-                city: "",
-                neighborhood: "",
-                zipcode: ""
-            }
-            ],
-            creditCards: [{
-                cardNumber: "",
-                expiryDate: "",
-                cvc: ""
-            }]
+        });
+
+        const userCardData = ref({
+            cardNumber: "",
+            expiryDate: "",
+            cvc: "",
+            userId: null
+        });
+
+        const userAdressData = ref({
+            street: "",
+            number: "",
+            neighborhood: "",
+            city: "",
+            zipCode: "",
+            userId: null
         });
 
         const getUserData = async () => {
             try {
 
-                const token = localStorage.getItem('AUTH_TOKEN');
-                console.log("Token JWT:", token);
+                const token = sessionStorage.getItem('AUTH_TOKEN');
                 if (!token) {
                     router.push("/login");                
                     throw new Error('Token não encontrado!');
@@ -170,7 +164,7 @@ export default defineComponent ({
 
         const updateUserData = async () => {
             try {
-                const token = localStorage.getItem('AUTH_TOKEN');
+                const token = sessionStorage.getItem('AUTH_TOKEN');
                 if (!token) {
                     throw new Error('Token não encontrado!');
                 }
@@ -182,12 +176,76 @@ export default defineComponent ({
                     }
                 });
 
-                console.log('Dados atualizados com sucesso:', response.data);
-                alert('Dados atualizados com sucesso!');
-
             } catch (error) {
                 console.error('Erro ao atualizar os dados do usuário:', error);
                 alert('erro ao atualizar dados!');
+            }
+
+            
+        };
+
+        const updateCardData = async () => {
+            try{
+                const token = sessionStorage.getItem('AUTH_TOKEN');
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                const expiryDate = new Date(userCardData.value.expiryDate);
+
+                userCardData.value.expiryDate = expiryDate.toISOString();
+
+                userCardData.value.userId = userData.value.id;
+
+                const response = await axios.post('https://localhost:7288/api/CreditCard', userCardData.value, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                });
+
+                if (!userCardData.value.cardNumber || !userCardData.value.expiryDate || !userCardData.value.cvc) {
+                    alert('Por favor, preencha todos os campos do cartão.');
+                    return;
+                }
+
+                console.log("cartão adicionado com sucesso");
+            } catch (error) {
+                console.log('Dados do cartão:', userCardData.value);
+                console.error('Erro ao inserir cartão do usuário:', error);
+                alert('Erro ao inserir cartão do usuário');
+            }
+        };
+
+        const updateUserImg = async () => {
+            try{
+                const token = sessionStorage.getItem('AUTH_TOKEN');
+                if (!token){
+                    throw new Error("token do usuário não encontrado.");
+                }
+
+                const userId = userData.value.id;
+                const fileInput = document.querySelector<HTMLInputElement>('.inputPicture');
+
+                if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+                    alert("Por favor, selecione uma imagem.");
+                    return;
+                }
+
+                const formData = new FormData();
+                formData.append("image", fileInput.files[0]);
+
+                const updateImage = await axios.post(`/api/User/${userId}/UploadImage`, formData, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+                console.log("imagem alterada com sucesso!", updateImage)
+            } catch (error) {
+                console.error('Erro ao atualizar imagem do usuário:', error);
+                alert('erro ao atualizar imagem');
             }
         };
 
@@ -195,7 +253,11 @@ export default defineComponent ({
 
         return {
             userData,
-            updateUserData
+            userCardData,
+            userAdressData,
+            updateUserImg,
+            updateUserData,
+            updateCardData
         };
     },
         

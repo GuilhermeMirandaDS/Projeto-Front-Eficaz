@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ej8RiDXjxq+JeR7IbJgr7HxD4reyzUWcG8MDuapCSgI=",
+  "Hash": "7hykTzfjJISPH2CEc3qXfRvk6w3qj9jjrgW9YumgIzg=",
   "Source": "LoginEficaz",
   "BasePath": "_content/LoginEficaz",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LoginEficaz\\wwwroot",
       "Source": "LoginEficaz",
-      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
       "BasePath": "_content/LoginEficaz",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod2.jpeg",
+      "Identity": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prod2.jpeg",
       "SourceId": "LoginEficaz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
       "BasePath": "_content/LoginEficaz",
       "RelativePath": "products/prod2.jpeg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\products\\prod2.jpeg"
     },
     {
-      "Identity": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod3.jpg",
+      "Identity": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prod3.jpg",
       "SourceId": "LoginEficaz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
       "BasePath": "_content/LoginEficaz",
       "RelativePath": "products/prod3.jpg",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\products\\prod3.jpg"
     },
     {
-      "Identity": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
+      "Identity": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
       "SourceId": "LoginEficaz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
       "BasePath": "_content/LoginEficaz",
       "RelativePath": "products/prodId.jpeg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\products\\prodId.jpeg"
     },
     {
-      "Identity": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\users\\ds.jpg",
+      "Identity": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\users\\ds.jpg",
       "SourceId": "LoginEficaz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
       "BasePath": "_content/LoginEficaz",
       "RelativePath": "users/ds.jpg",
       "AssetKind": "All",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\users\\ds.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\users\\dszz.jpeg",
+      "SourceId": "LoginEficaz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\",
+      "BasePath": "_content/LoginEficaz",
+      "RelativePath": "users/dszz.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\users\\dszz.jpeg"
     }
   ]
 }

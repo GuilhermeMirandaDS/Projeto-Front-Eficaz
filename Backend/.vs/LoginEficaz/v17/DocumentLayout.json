@@ -1,10 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.CreditCards.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\backend\\logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|solutionrelative:logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124135136_teste-final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241124135136_teste-final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124134811_teste-final1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241124134811_teste-final1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +33,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dbo.CreditCards [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.CreditCards.sql",
+              "ToolTip": "dbo.CreditCards [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-24T18:43:18.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20241124135136_teste-final2.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124135136_teste-final2.cs",
+              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241124135136_teste-final2.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124135136_teste-final2.cs",
+              "RelativeToolTip": "Adapters\\Migrations\\20241124135136_teste-final2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:51:36.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20241124134811_teste-final1.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124134811_teste-final1.cs",
+              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241124134811_teste-final1.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241124134811_teste-final1.cs",
+              "RelativeToolTip": "Adapters\\Migrations\\20241124134811_teste-final1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:48:12.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Users [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-24T13:21:51.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\Program.cs",
               "RelativeDocumentMoniker": "LoginEficaz\\Program.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\Program.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\Program.cs",
               "RelativeToolTip": "LoginEficaz\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T03:50:25.456Z",
               "EditorCaption": ""

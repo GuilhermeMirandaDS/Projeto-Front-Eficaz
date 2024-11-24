@@ -55,7 +55,19 @@ import { RouterLink, RouterView } from 'vue-router';
   import axios from 'axios';
   import api from '@/services/api';
 
+  const checkAuth = async() => {
+    const token = sessionStorage.getItem('AUTH_TOKEN');
+    if (token) {
+        router.push("/");                
+        throw new Error('já autenticado');
+    }
+
+  };
+
+  checkAuth();
+
   export default defineComponent({
+    
     name:'UserLogin',
     data() {
       return {
@@ -64,6 +76,7 @@ import { RouterLink, RouterView } from 'vue-router';
       };
     },
     methods: {
+
       async submitForm() {
         try {
           const response = await axios.post('https://localhost:7288/api/User/login', {
@@ -80,7 +93,7 @@ import { RouterLink, RouterView } from 'vue-router';
           alert("Informações inválidas!");
         }
       }
-    }
+    },
   });
   </script>
   

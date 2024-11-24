@@ -12,7 +12,7 @@ import router from '@/router/index.js';
 import BestSellers from './components/BestSellers.vue';
 
 const checkAuth = async() => {
-  const token = localStorage.getItem('AUTH_TOKEN');
+  const token = sessionStorage.getItem('AUTH_TOKEN');
   console.log("Token JWT:", token);
   if (!token) {
       router.push("/login");                

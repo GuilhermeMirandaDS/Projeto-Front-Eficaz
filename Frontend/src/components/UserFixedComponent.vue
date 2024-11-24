@@ -2,14 +2,12 @@
 
     <div v-if="userData" id="app">
         <div class="top-page">
-            <!-- <img v-if="imageUrl" :src="imageUrl" alt="user-pic" class="user-img"/> -->
-            <img src="../assets/pfp.png" alt="user-pic" class="user-img"/>
-
+            <img :src="`https://localhost:7288/${userData.imageUrl}`" class="user-img" v-if="userData.imageUrl"/>
+            <p v-else> sem imagem </p>
             <div class="user-info1">
                 <h1>{{ userData.firstName }}</h1>
                 <h3>{{ userData.username }}</h3>
-                <!-- <h1>Gabriela Leal</h1>
-                <h3>Gabizinha</h3> -->
+
             </div>
             <RouterLink to="/edit" class="edit-btn">Edit Profile</RouterLink>
         </div>
@@ -20,36 +18,38 @@
                     <div class="object1">
                         <label>Name</label>
                         <input class="label-input" type="text" :placeholder="userData ? userData.firstName : 'name'" disabled="">
-                        <!-- <input class="label-input" type="text" placeholder="Gabriela" disabled=""> -->
 
                     </div>
                     <div class="object1">
                         <label>Last Name</label>
                         <input class="label-input" type="text" :placeholder="userData ? userData.lastName : 'last name'" disabled="">
-                        <!-- <input class="label-input" type="text" placeholder="Leal" disabled=""> -->
                     </div>
                 </div>
                 <div class="phone-area">
                     <div class="object1">
                         <label>Mobile Phone</label>
                         <input class="label-input" type="number" :placeholder="userData ? userData.celular : '(00) 00000-0000'" disabled="">
-                        <!-- <input class="label-input" type="number" placeholder="(00) 0000-0000" disabled=""> -->
                     </div>
                     <div class="object1">
                         <label>Landline</label>
                         <input class="label-input" type="number" :placeholder="userData ? userData.telefoneFixo : '(00) 0000-0000'" disabled="">
-                        <!-- <input class="label-input" type="number" placeholder="(00) 0000-0000" disabled=""> -->
                     </div>
                 </div>
             </div>
             <div class="object2">
                 <label>Date of Birth</label>
-                <!-- <input type="text" class="calendar" placeholder="14/05/2003" disabled=""> -->
                 <input type="text" class="calendar" :placeholder="userData ? userData.dob : 'dd/MM/yyyy'" disabled="">
             </div>
             <div class="object2">
                 <label>Address</label>
-                <p class="adress">Rua teste, 1001 · (14) 2105-4000</p>
+                <div v-if="userAdressData && userAdressData.length > 0">
+                    <div v-for="(adress, index) in userAdressData" :key="index">
+                        <p class="adress">
+                            {{ adress.street }}, {{ adress.number }} - {{ adress.neighborhood }} - {{ adress.city }}
+                        </p>
+                    </div>
+                </div>
+                <p v-else>Carregando informações...</p>
             </div>
         </div>
         <div class="login">
@@ -57,24 +57,21 @@
             <div class="object3">
                 <label>E-mail</label>
                 <input class="label-input" type="email" :placeholder="userData ? userData.email : 'Email'" disabled="">
-                <!-- <input class="label-input" type="email" placeholder="Email" disabled=""> -->
             </div>
             <div class="object3">
                 <label>Password</label>
-                <!-- <input class="label-input" type="password" :placeholder="userData ? userData.Password : 'Password'" disabled=""> -->
                 <input class="label-input" type="password" placeholder="******" disabled="">
 
             </div>
         </div>
         <div class="card-info">
             <h1>Cards</h1>
-            <div class="credit-card">
-                <input type="text" class="adress" disabled="" value="1234 5678 8765 4321">
-                <div class="last2">
-                    <input type="text" class="adress" disabled="" value="01/30">
-                    <input type="text" class="adress" disabled="" value="123">
+            <div class="credit-card" v-if="userCardData && userCardData.length > 0">
+                <div v-for="(card, index) in userCardData" :key="index" class="card">
+                    <p class="adress">{{ card.cardNumber }} - {{ card.expiryDate }} - {{ card.cvc }}</p>
                 </div>
             </div>
+            <p v-else>Carregando informações...</p>
         </div>
     </div>
     <div class="else" v-else><p>Carregando dados do Usuário...</p></div>
@@ -91,12 +88,14 @@ export default defineComponent({
     name: "userProfile",
     setup() {
         const userData = ref(null);
+        const userCardData = ref(null);
+        const userAdressData = ref(null);
+
 
         const getUserData = async () => {
             try {
 
                 const token = sessionStorage.getItem('AUTH_TOKEN');
-                console.log("Token JWT:", token);
                 if (!token) {
                     router.push("/login");                
                     throw new Error('Token não encontrado!');
@@ -107,11 +106,81 @@ export default defineComponent({
                         Authorization: `Bearer ${token}`
                     }
                 });
-                userData.value = response.data;
 
+                userData.value = response.data;
+                
+                if (userData.value?.id) {
+                    await getCardData();
+                    await getAdressData();
+                };
 
             } catch (error) {
                 console.error('Erro ao buscar os dados do usuário:', error);
+            }
+        };
+
+        const formatExpiryDate = (dateString) => {
+            const date = new Date(dateString);
+            const month = date.toLocaleString("default", { month: "2-digit" });
+            const year = date.getFullYear();
+            return `${month}/${year}`;
+        };
+
+        const getCardData = async() => {
+            try{
+                const token = sessionStorage.getItem('AUTH_TOKEN');
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                console.log("User ID:", userData.value?.id);
+
+                const response = await axios.get(`https://localhost:7288/api/CreditCard/${userData.value.id}`,  {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                console.log("Card Data Response:", response.data);
+
+                userCardData.value = Array.isArray(response.data)
+                    ? response.data.map(card => ({
+                        ...card,
+                        expiryDate: formatExpiryDate(card.expiryDate)
+                    }))
+                    : {
+                        ...response.data,
+                        expiryDate: formatExpiryDate(response.data.expiryDate)
+                    };
+                
+            } catch (error){
+                console.error('Erro ao buscar os dados do cartão do usuário:', error);
+            }
+        };
+
+        const getAdressData = async() => {
+            try{
+                const token = sessionStorage.getItem('AUTH_TOKEN');
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                console.log("User ID:", userData.value?.id);
+
+                const userId = userData.value.id;
+
+                const response = await axios.get(`https://localhost:7288/api/Address/${userData.value.id}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                console.log("Card Data Response:", response.data);
+
+                userAdressData.value = Array.isArray(response.data) ? response.data : [response.data];
+                
+            } catch (error){
+                console.error('Erro ao buscar os dados do endereço do usuário:', error);
             }
         };
 
@@ -119,7 +188,7 @@ export default defineComponent({
             getUserData();
         });
 
-        return { userData };
+        return { userData, userCardData, userAdressData };
     }
 });
 </script>
