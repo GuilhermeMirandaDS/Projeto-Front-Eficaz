@@ -3,111 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123205335_testando23.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241123205335_testando23.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|solutionrelative:application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\secondary\\infra.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\secondary\\infra.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\secondary\\infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\secondary\\infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\primary\\api\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123204638_testando22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241123204638_testando22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124032832_testando67.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241124032832_testando67.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2830EEA-1CA3-4BD6-BCA3-51405B01366D}|LoginEficaz\\LoginEficaz.csproj|solutionrelative:logineficaz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124025857_testando66.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241124025857_testando66.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\primary\\api\\adresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\adresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\primary\\api\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\primary\\api\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\secondary\\infra.data\\repositories\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\secondary\\infra.data\\repositories\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\dtos\\branddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\dtos\\branddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|solutionrelative:application\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\secondary\\infra.data\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\secondary\\infra.data\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\icreditcardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\icreditcardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Addresses.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\application\\services\\adressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|solutionrelative:application\\services\\adressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iadressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iadressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\migrations\\20241123182906_testando13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\migrations\\20241123182906_testando13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\migrations\\20241123182121_testando12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\migrations\\20241123182121_testando12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\migrations\\20241123182009_testando11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\migrations\\20241123182009_testando11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\adapters\\migrations\\20241123173920_testando9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\migrations\\20241123173920_testando9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\core\\ports\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1187E842-EAAC-4048-A3FF-27F51A1FFC20}|Core\\Core.csproj|solutionrelative:core\\ports\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -117,336 +61,173 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Users [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-24T03:33:17.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20241123205335_testando23.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123205335_testando23.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123205335_testando23.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123205335_testando23.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123205335_testando23.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\UserController.cs",
+              "RelativeDocumentMoniker": "Adapters\\Primary\\API\\UserController.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\UserController.cs",
+              "RelativeToolTip": "Adapters\\Primary\\API\\UserController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwDcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T20:53:35.489Z",
+              "WhenOpened": "2024-11-24T02:59:50.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20241123204638_testando22.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123204638_testando22.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123204638_testando22.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123204638_testando22.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123204638_testando22.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T20:46:39.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\ProductController.cs",
               "RelativeDocumentMoniker": "Adapters\\Primary\\API\\ProductController.cs",
               "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\ProductController.cs",
               "RelativeToolTip": "Adapters\\Primary\\API\\ProductController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswDMAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwD0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:18:26.458Z",
+              "WhenOpened": "2024-11-24T02:58:57.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductService.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IProductService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductService.cs",
-              "RelativeToolTip": "Core\\Ports\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAVAAAAAAAAAA==",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Adapters\\Secondary\\Infra.Data\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Adapters\\Secondary\\Infra.Data\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:54:00.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Brand.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Entities\\Brand.cs",
-              "RelativeDocumentMoniker": "Core\\Entities\\Brand.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Entities\\Brand.cs",
-              "RelativeToolTip": "Core\\Entities\\Brand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:49:13.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "Adapters\\Secondary\\Infra.Data\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "Adapters\\Secondary\\Infra.Data\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAcwDkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:04:01.262Z",
+              "WhenOpened": "2024-11-24T02:54:59.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductRepository.cs",
-              "RelativeToolTip": "Core\\Ports\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAVAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswFgAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:08:19.12Z",
+              "WhenOpened": "2024-11-24T02:47:51.821Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\ProductService.cs",
-              "RelativeToolTip": "Application\\Services\\ProductService.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwEIAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:58:34.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "20241123182906_testando13.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182906_testando13.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123182906_testando13.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182906_testando13.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123182906_testando13.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:29:06.838Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\Program.cs",
-              "RelativeDocumentMoniker": "LoginEficaz\\Program.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\Program.cs",
-              "RelativeToolTip": "LoginEficaz\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBMAAAA6AAAAAAAAAA==",
+              "Title": "AddressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\AddressDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\AddressDTO.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\AddressDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\AddressDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:38:58.7Z",
+              "WhenOpened": "2024-11-24T03:00:52.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20241124032832_testando67.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124032832_testando67.cs",
+              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241124032832_testando67.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124032832_testando67.cs",
+              "RelativeToolTip": "Adapters\\Migrations\\20241124032832_testando67.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:28:32.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IUserService.cs",
+              "RelativeDocumentMoniker": "Core\\Ports\\IUserService.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IUserService.cs",
+              "RelativeToolTip": "Core\\Ports\\IUserService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:48:30.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241124025857_testando66.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124025857_testando66.cs",
+              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241124025857_testando66.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241124025857_testando66.cs",
+              "RelativeToolTip": "Adapters\\Migrations\\20241124025857_testando66.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:58:58.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\ProductDTO.cs",
-              "RelativeDocumentMoniker": "Core\\DTOs\\ProductDTO.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\ProductDTO.cs",
-              "RelativeToolTip": "Core\\DTOs\\ProductDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Ports\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IUserRepository.cs",
+              "RelativeToolTip": "Core\\Ports\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:01:01.35Z"
+              "WhenOpened": "2024-11-24T02:58:02.66Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "20241123182121_testando12.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182121_testando12.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123182121_testando12.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182121_testando12.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123182121_testando12.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "UpdateProfileDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\UpdateProfileDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTOs\\UpdateProfileDTO.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\UpdateProfileDTO.cs",
+              "RelativeToolTip": "Core\\DTOs\\UpdateProfileDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:21:21.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IBrandService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IBrandService.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IBrandService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IBrandService.cs",
-              "RelativeToolTip": "Core\\Ports\\IBrandService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:53:28.014Z"
+              "WhenOpened": "2024-11-24T02:53:04.993Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "AdressController.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\AdressController.cs",
-              "RelativeDocumentMoniker": "Adapters\\Primary\\API\\AdressController.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\AdressController.cs",
-              "RelativeToolTip": "Adapters\\Primary\\API\\AdressController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Entities\\User.cs",
+              "RelativeToolTip": "Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:37:54.06Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BrandDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\BrandDTO.cs",
-              "RelativeDocumentMoniker": "Core\\DTOs\\BrandDTO.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\DTOs\\BrandDTO.cs",
-              "RelativeToolTip": "Core\\DTOs\\BrandDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:54:47.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\BrandRepository.cs",
-              "RelativeDocumentMoniker": "Adapters\\Secondary\\Infra.Data\\Repositories\\BrandRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\BrandRepository.cs",
-              "RelativeToolTip": "Adapters\\Secondary\\Infra.Data\\Repositories\\BrandRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:05:54.638Z"
+              "WhenOpened": "2024-11-24T02:51:44.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "BrandController.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\BrandController.cs",
-              "RelativeDocumentMoniker": "Adapters\\Primary\\API\\BrandController.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Primary\\API\\BrandController.cs",
-              "RelativeToolTip": "Adapters\\Primary\\API\\BrandController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductService.cs",
+              "RelativeDocumentMoniker": "Core\\Ports\\IProductService.cs",
+              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IProductService.cs",
+              "RelativeToolTip": "Core\\Ports\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:09:08.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "20241123182009_testando11.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182009_testando11.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123182009_testando11.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123182009_testando11.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123182009_testando11.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:20:09.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BrandService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\BrandService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\BrandService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\BrandService.cs",
-              "RelativeToolTip": "Application\\Services\\BrandService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAASwCAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:01:58.182Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IBrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IBrandRepository.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IBrandRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IBrandRepository.cs",
-              "RelativeToolTip": "Core\\Ports\\IBrandRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:07:58.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AddressRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\AddressRepository.cs",
-              "RelativeDocumentMoniker": "Adapters\\Secondary\\Infra.Data\\Repositories\\AddressRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Secondary\\Infra.Data\\Repositories\\AddressRepository.cs",
-              "RelativeToolTip": "Adapters\\Secondary\\Infra.Data\\Repositories\\AddressRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwA4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:36:21.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "dbo.Addresses.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Addresses.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Addresses.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-23T17:40:12.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ICreditCardService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\ICreditCardService.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\ICreditCardService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\ICreditCardService.cs",
-              "RelativeToolTip": "Core\\Ports\\ICreditCardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:30:14.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20241123173920_testando9.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123173920_testando9.cs",
-              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241123173920_testando9.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241123173920_testando9.cs",
-              "RelativeToolTip": "Adapters\\Migrations\\20241123173920_testando9.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:39:21.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AdressService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\AdressService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\AdressService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\AdressService.cs",
-              "RelativeToolTip": "Application\\Services\\AdressService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwBoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:33:08.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IAdressRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IAdressRepository.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IAdressRepository.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IAdressRepository.cs",
-              "RelativeToolTip": "Core\\Ports\\IAdressRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:31:19.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAdressService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IAdressService.cs",
-              "RelativeDocumentMoniker": "Core\\Ports\\IAdressService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Ports\\IAdressService.cs",
-              "RelativeToolTip": "Core\\Ports\\IAdressService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:30:16.675Z"
+              "WhenOpened": "2024-11-24T02:48:18.026Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -8,5 +8,6 @@ namespace LoginEficaz.Core.Ports
         Task<User> GetUserById(Guid userId);
         Task RegisterUser(User user);
         Task UpdateUser(User user);
+        Task UploadImage();
     }
 }

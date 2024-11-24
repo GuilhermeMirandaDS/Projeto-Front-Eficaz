@@ -1,4 +1,5 @@
 ﻿using LoginEficaz.Adapters.Secondary.Infra.Auth;
+using LoginEficaz.Adapters.Secondary.Infra.Data.Repositories;
 using LoginEficaz.Core.DTOs;
 using LoginEficaz.Core.Entities;
 using LoginEficaz.Core.Ports;
@@ -9,11 +10,14 @@ namespace LoginEficaz.Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly TokenService _tokenService;
+        private readonly IImageService _imageService;
 
-        public UserService(IUserRepository userRepository, TokenService tokenService)
+        public UserService(IUserRepository userRepository, TokenService tokenService, IImageService imageService)
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+            _imageService = imageService;
+
         }
 
         public async Task RegisterUser(RegisterUserDTO registerUser)
@@ -66,20 +70,6 @@ namespace LoginEficaz.Application.Services
             user.Gender = updateProfile.Gender;
             user.CPF = updateProfile.CPF;
             user.Email = updateProfile.Email;
-            user.Addresses = updateProfile.Addresses.Select(a => new Address
-            {
-                Street = a.Street,
-                Number = a.Number,
-                Neighborhood = a.Neighborhood,
-                City = a.City,
-                ZipCode = a.ZipCode
-            }).ToList();
-            user.CreditCards = updateProfile.CreditCards.Select(c => new CreditCard
-            {
-                CardNumber = c.CardNumber,
-                ExpiryDate = c.ExpiryDate,
-                CVC = c.CVC
-            }).ToList();
 
             await _userRepository.UpdateUser(user);
         }
@@ -90,6 +80,19 @@ namespace LoginEficaz.Application.Services
                 throw new KeyNotFoundException("User not found");
 
             return user;
+        }
+
+        public async Task<string> UploadProfilePicture(Guid userId, FileData file)
+        {
+            User user = await GetUserById(userId);
+
+            string uploadedFileUrl = await _imageService.UploadImage(file, "users", $"{user.Username}");
+
+            user.ImageUrl = uploadedFileUrl;
+
+            await _userRepository.UploadImage();
+
+            return uploadedFileUrl;
         }
         private string HashPassword(string password)
         {

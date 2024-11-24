@@ -12,6 +12,7 @@
         public string Username { get; set; }
         public string PasswordHash { get; set; }
         public string Email { get; set; }
+        public string? ImageUrl { get; set; }
         public List<CreditCardDTO> CreditCards { get; set; } = new List<CreditCardDTO>();
         public List<AddressDTO> Addresses { get; set; } = new List<AddressDTO>();
     }

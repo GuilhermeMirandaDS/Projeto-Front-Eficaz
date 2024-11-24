@@ -14,6 +14,7 @@
         public string PasswordHash { get; set; }
         public string? Email { get; set; }
         public bool TermsAgreed { get; set; }
+        public string? ImageUrl { get; set; }
         public List<Address> Addresses { get; set; } = new List<Address>();
         public List<CreditCard> CreditCards { get; set; } = new List<CreditCard>();
     }
