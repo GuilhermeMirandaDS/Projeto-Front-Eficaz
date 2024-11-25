@@ -58,7 +58,7 @@
                                 <input class="label-input" type="text" v-model="userAdressData.street" placeholder="Road">
                                 <input class="label-input" type="number" v-model="userAdressData.number" placeholder="Number">
                             </div>
-                        <button type="submit"class="saveBtn" @click="closeModalAdress">Save</button>
+                        <button type="submit"class="saveBtn" @click="closeModalAdress()">Save</button>
                         <button type="button" class="cancelBtn" @click="closeModalAdress">Cancel</button>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="modalContent">
                     <label>New Card</label>
                     <div class="last2-modal">
-                        <input type="datetime" v-model="userCardData.expiryDate" placeholder="MM/YY">
+                        <input type="date" v-model="userCardData.expiryDate" placeholder="MM/YY">
                         <input type="number" v-model="userCardData.cvc" placeholder="CVC">
                     </div>
                     <input type="number" class="card-input" v-model="userCardData.cardNumber" placeholder="0000 0000 0000 0000">

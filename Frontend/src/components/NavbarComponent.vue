@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-</script>
-
 <template>
 
     <nav class="navbar">
@@ -31,17 +27,57 @@ import { RouterLink } from 'vue-router';
             </div>
         </div>
         <div class="nav-auth">
-            <RouterLink to="/user"><img src="/src/assets/pfp.png" class="userIMG" alt="User Image"></RouterLink>
-            <RouterLink to="/login" class="sign-in" style="font-weight: 900;">SIGN IN</RouterLink>
-            <RouterLink to="/register" class="signup">SIGN UP FOR FREE</RouterLink>
+            <RouterLink v-if="isAuthenticated" to="/user" class="userlink">
+                <img :src="`https://localhost:7288/${userData.imageUrl}`" class="userIMG" v-if="userData.imageUrl"/>
+            </RouterLink>
+            <RouterLink v-if="!isAuthenticated" to="/login" class="sign-in" style="font-weight: 900;">SIGN IN</RouterLink>
+            <RouterLink v-if="!isAuthenticated" to="/register" class="signup">SIGN UP FOR FREE</RouterLink>
         </div>
     </nav>
 </template>
 
+<script setup lang="ts">
+
+import { ref, onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
+import axios from 'axios';
+
+const isAuthenticated = ref(false);
+const userData = ref<{ imageUrl: string } | null>(null);
+
+const getUserData = async () => {
+    try {
+
+        const token = sessionStorage.getItem('AUTH_TOKEN');
+        if (!token) {               
+            throw new Error('Token não encontrado!');
+        }
+
+        const response = await axios.get('https://localhost:7288/api/User/profile', {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+        userData.value = response.data;
+        isAuthenticated.value = true;
+
+    } catch (error) {
+        console.error('Erro ao buscar os dados do usuário:', error);
+        isAuthenticated.value = false;
+    }
+    };
+
+onMounted(() => {
+    getUserData();
+});
+
+</script>
 
 <style scoped>
 
-
+.userlink{
+    padding: 10px;
+}
 
 .navbar {
     width: 100%;
@@ -62,7 +98,8 @@ import { RouterLink } from 'vue-router';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding-left: 2%;
+    margin: 0%;
 }
 
 .navbar-logo {
@@ -178,6 +215,7 @@ import { RouterLink } from 'vue-router';
 .userIMG{
     width: 50px;
     border-radius: 50%;
+    padding:0px 20px;
 }
 
 

@@ -21,17 +21,17 @@
             </button>
   
             <div class="card-header">
-              <h3>{{ product.name }}</h3>
+              <h3>{{ product.prodName }}</h3>
               <p class="price">
                 <span class="currency">R$</span>
                 <span class="amount">{{ product.price.toFixed(2).replace('.', ',') }}</span>
               </p>
             </div>
   
-            <div class="tags">
+            <!-- <div class="tags">
               <span class="tag">JBL</span>
               <span class="tag">Fone</span>
-            </div>
+            </div> -->
   
             <p class="description">{{ product.description }}</p>
   
@@ -53,12 +53,7 @@
   </template>
   
   <script>
-  import product1 from '@/assets/image.png';
-  import product2 from '@/assets/image.png';
-  import product3 from '@/assets/image.png';
-  import product4 from '@/assets/image.png';
-  import product5 from '@/assets/image.png';
-  import product6 from '@/assets/image.png';
+  import axios from 'axios';
   
   export default {
     data() {
@@ -66,14 +61,7 @@
         currentIndex: 0,
         productsPerPage: 3,
         direction: 'right',
-        products: [
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description: "Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product1, isFavorited: false },
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description:"Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product2, isFavorited: false },
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description: "Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product3, isFavorited: false },
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description: "Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product4, isFavorited: false },
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description:"Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product5, isFavorited: false },
-          { name: "JBL Children's Bluetooth Headphones", price: 40.00, description: "Gabini® K-29 Premium Headset with Multi-Device Connectivity and Noise-Canceling Technology, Black.", img: product6, isFavorited: false }
-        ]
+        products: []
       };
     },
     computed: {
@@ -81,7 +69,26 @@
         return this.products.slice(this.currentIndex, this.currentIndex + this.productsPerPage);
       }
     },
+    mounted() {
+      this.fetchProducts();
+    },
     methods: {
+      async fetchProducts() {
+        try {
+          const token = sessionStorage.getItem('AUTH_TOKEN');
+            if (!token) {                
+                throw new Error('Token não encontrado!');
+            }
+          const response = await axios.get('https://localhost:7288/api/Product', {
+              headers: {
+                  Authorization: `Bearer ${token}`
+              }
+          });
+          this.products = response.data;
+        } catch (error) {
+          console.error('Erro ao buscar produtos:', error);
+        }
+      },
       toggleFavorite(product) {
       product.isFavorited = !product.isFavorited; 
       },
