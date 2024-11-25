@@ -4369,19 +4369,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guiif\\.nuget\\packages\\": {}
+    "C:\\Users\\ebper\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\LoginEficaz.csproj",
+      "projectUniqueName": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\LoginEficaz.csproj",
       "projectName": "LoginEficaz",
-      "projectPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\LoginEficaz.csproj",
-      "packagesPath": "C:\\Users\\guiif\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\obj\\",
+      "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\LoginEficaz.csproj",
+      "packagesPath": "C:\\Users\\ebper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\guiif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ebper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4396,14 +4396,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Adapters.csproj": {
-              "projectPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Adapters.csproj"
+            "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Adapters.csproj": {
+              "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Adapters.csproj"
             },
-            "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Application\\Application.csproj"
+            "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Application.csproj"
             },
-            "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Core\\Core.csproj"
+            "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Core\\Core.csproj"
             }
           }
         }
@@ -4473,7 +4473,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

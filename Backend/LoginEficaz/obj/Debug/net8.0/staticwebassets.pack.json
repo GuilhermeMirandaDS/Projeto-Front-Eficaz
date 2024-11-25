@@ -1,24 +1,52 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prod2.jpeg",
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod1.jpeg",
+      "PackagePath": "staticwebassets\\products\\prod1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod2.jpeg",
       "PackagePath": "staticwebassets\\products\\prod2.jpeg"
     },
     {
-      "Id": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prod3.jpg",
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod3.jpeg",
+      "PackagePath": "staticwebassets\\products\\prod3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod3.jpg",
       "PackagePath": "staticwebassets\\products\\prod3.jpg"
     },
     {
-      "Id": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod4.jpeg",
+      "PackagePath": "staticwebassets\\products\\prod4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod5.jpeg",
+      "PackagePath": "staticwebassets\\products\\prod5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prod6.jpeg",
+      "PackagePath": "staticwebassets\\products\\prod6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\products\\prodId.jpeg",
       "PackagePath": "staticwebassets\\products\\prodId.jpeg"
     },
     {
-      "Id": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\users\\ds.jpg",
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\users\\ds.jpg",
       "PackagePath": "staticwebassets\\users\\ds.jpg"
     },
     {
-      "Id": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\LoginEficaz\\wwwroot\\users\\dszz.jpeg",
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\users\\dszz.jpeg",
       "PackagePath": "staticwebassets\\users\\dszz.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\users\\guilherme.jfif",
+      "PackagePath": "staticwebassets\\users\\guilherme.jfif"
+    },
+    {
+      "Id": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\LoginEficaz\\wwwroot\\users\\guilherme.jpeg",
+      "PackagePath": "staticwebassets\\users\\guilherme.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoginEficaz.Microsoft.AspNetCore.StaticWebAssets.props",

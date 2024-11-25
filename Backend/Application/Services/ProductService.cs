@@ -29,7 +29,8 @@ namespace LoginEficaz.Application.Services
                 ProdName = p.ProdName,
                 Description = p.Description,
                 Price = p.Price,
-                BrandId = p.BrandId
+                BrandId = p.BrandId,
+                ImageUrl = p.ImageUrl
             }).ToList();
         }
 
@@ -43,7 +44,8 @@ namespace LoginEficaz.Application.Services
                 ProdName = product.ProdName,
                 Description = product.Description,
                 Price = product.Price,
-                BrandId = product.BrandId
+                BrandId = product.BrandId,
+                ImageUrl = product.ImageUrl
             };
         }
 
@@ -56,7 +58,8 @@ namespace LoginEficaz.Application.Services
                 ProdName = p.ProdName,
                 Description = p.Description,
                 Price = p.Price,
-                BrandId = p.BrandId
+                BrandId = p.BrandId,
+                ImageUrl = p.ImageUrl
             }).ToList();
         }
 
@@ -68,7 +71,7 @@ namespace LoginEficaz.Application.Services
 
             productDto.ImageUrl = uploadedFileUrl;
 
-            await _productRepository.UpdateImage();
+            await UpdateProduct(productDto);
 
             return uploadedFileUrl;
         }
@@ -83,7 +86,8 @@ namespace LoginEficaz.Application.Services
                 ProdName = productDto.ProdName,
                 Description = productDto.Description,
                 Price = productDto.Price,
-                BrandId = productDto.BrandId
+                BrandId = productDto.BrandId,
+                ImageUrl = productDto.ImageUrl
             };
 
             await _productRepository.RegisterProduct(product);
@@ -97,7 +101,8 @@ namespace LoginEficaz.Application.Services
                 ProdName = productDto.ProdName,
                 Description = productDto.Description,
                 Price = productDto.Price,
-                BrandId = productDto.BrandId
+                BrandId = productDto.BrandId,
+                ImageUrl = productDto.ImageUrl
             };
 
             await _productRepository.UpdateProduct(product);
