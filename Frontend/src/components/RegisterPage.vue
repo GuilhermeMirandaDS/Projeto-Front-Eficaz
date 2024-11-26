@@ -24,8 +24,8 @@
               <input type="date" v-model="dob"/>
   
               <div class="row">
-                <input type="text" v-model="telefoneFixo" placeholder="Telefone fixo" class="half-width" inputmode="numeric" pattern="\d{8}*" />
-                <input type="text" v-model="celular" placeholder="Celular" class="half-width" inputmode="numeric" pattern="\d{11}*" />
+                <input type="text" v-model="telefoneFixo" placeholder="Landline" class="half-width" inputmode="numeric" pattern="\d{8}*" />
+                <input type="text" v-model="celular" placeholder="Phone" class="half-width" inputmode="numeric" pattern="\d{11}*" />
               </div>
   
               <select v-model="gender" required>
@@ -46,16 +46,16 @@
   
               <div class="row">
                 <input type="password" v-model="password" placeholder="Password" required class="half-width" />
-                <input type="password" v-model="confirmPassword" placeholder="Confirm password" required class="half-width" />
+                <input type="password" v-model="confirmPassword" placeholder="Confirm Password" required class="half-width" />
               </div>
   
-              <input type="text" v-model="securityQuestion" placeholder="Pergunta de segurança" required />
+              <input type="text" v-model="securityQuestion" placeholder="Security Question" required />
             </div>
   
             <div class="terms-checkbox">
               <input type="checkbox" v-model="termsAgreed" required id="terms-checkbox" />
               <label for="terms-checkbox">
-                Concordo com as <a href="#">Condições de Uso</a> da Gabini.
+                Agree with <a href="#">Terms and Conditions</a> of Gabini.
               </label>
             </div>
   

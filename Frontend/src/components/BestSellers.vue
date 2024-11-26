@@ -1,6 +1,6 @@
 <template>
     <div class="products-container">
-      <h2>OS MAIS VENDIDOS</h2>
+      <h2>Best Sellers</h2>
   
       <transition
         name="slide"
@@ -27,11 +27,6 @@
                 <span class="amount">{{ product.price.toFixed(2).replace('.', ',') }}</span>
               </p>
             </div>
-<!--   
-            <div class="tags">
-              <span class="tag">JBL</span>
-              <span class="tag">Fone</span>
-            </div> -->
   
             <p class="description">{{ product.description }}</p>
   
@@ -39,7 +34,7 @@
               <button class="add-to-cart">
                 <img src="/src/assets/Add_cart.png" alt="Add to Cart" />
               </button>
-              <button class="buy-now">Comprar agora</button>
+              <button class="buy-now">Buy Now</button>
             </div>
           </div>
         </div>

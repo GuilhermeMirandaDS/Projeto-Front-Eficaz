@@ -95,8 +95,10 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="save-btn" @click="updateUserData">Save</button>
-        <RouterLink to="/user" class="back-btn">Return to Profile</RouterLink>
+        <RouterLink class="routersave" to="/user">
+            <button type="submit" class="save-btn" @click="updateUserData">Save</button>
+        </RouterLink> 
+        <RouterLink to="/user" class="back-btn">Cancel</RouterLink>
     </form>
 </template>
 
@@ -143,7 +145,6 @@ export default defineComponent ({
             try {
 
                 const token = sessionStorage.getItem('AUTH_TOKEN');
-                console.log(token);
                 if (!token) {
                     router.push("/login");                
                     throw new Error('Token não encontrado!');
@@ -319,6 +320,8 @@ export default defineComponent ({
 </script>
 
 <style scoped>
+
+
 #app{
     display: flex;
     flex-direction: column;
@@ -503,14 +506,22 @@ label{
     width: 45%;
 }
 
-.saveBtn, .cancelBtn{
+.routersave{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saveBtn{
     font-family: 'Inter', sans-serif;
     text-align: center;
     border: none;
+    text-decoration: none;
+    outline: none;
+    font-style: normal;
     border-radius: 4px;
     padding: 13px 24px;
     width: 100%;
-    margin-top: 2%;
     background-color: rgba(105, 135, 205, 1) ;
     color: white;
     cursor: pointer;
@@ -518,6 +529,14 @@ label{
 .cancelBtn{
     background-color: rgb(167, 167, 167);
     width: 20%;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    padding: 13px 24px;
+    margin-top: 2%;
+    color: white;
+    cursor: pointer;
 }
 
 

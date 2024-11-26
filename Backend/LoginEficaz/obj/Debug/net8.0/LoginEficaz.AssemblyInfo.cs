@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoginEficaz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a63543583084ca4e83a5db63b13347296a23c55f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa02c0bed497587e416aa7cda4fa8cd08ac49f3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoginEficaz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoginEficaz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

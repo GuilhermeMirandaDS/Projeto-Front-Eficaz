@@ -48,7 +48,7 @@
                         </p>
                     </div>
                 </div>
-                <p v-else>Carregando informações...</p>
+                <p class="aviso" v-else>No Registered Adress</p>
             </div>
         </div>
         <div class="login">
@@ -70,10 +70,10 @@
                     <p class="adress">{{ card.cardNumber }} - {{ card.expiryDate }} - {{ card.cvc }}</p>
                 </div>
             </div>
-            <p v-else>Carregando informações...</p>
+            <p class="aviso" v-else>No Registered Card</p>
         </div>
     </div>
-    <div class="else" v-else><p>Carregando dados do Usuário...</p></div>
+    <div class="aviso" v-else><p>Carregando dados do Usuário...</p></div>
 
 </template>
 
@@ -132,15 +132,12 @@ export default defineComponent({
                     throw new Error('Token não encontrado!');
                 }
 
-                console.log("User ID:", userData.value?.id);
-
                 const response = await axios.get(`https://localhost:7288/api/CreditCard/${userData.value.id}`,  {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
                 });
 
-                console.log("Card Data Response:", response.data);
 
                 userCardData.value = Array.isArray(response.data)
                     ? response.data.map(card => ({
@@ -164,8 +161,6 @@ export default defineComponent({
                     throw new Error('Token não encontrado!');
                 }
 
-                console.log("User ID:", userData.value?.id);
-
                 const userId = userData.value.id;
 
                 const response = await axios.get(`https://localhost:7288/api/Address/${userData.value.id}`, {
@@ -174,7 +169,6 @@ export default defineComponent({
                     }
                 });
 
-                console.log("Card Data Response:", response.data);
 
                 userAdressData.value = Array.isArray(response.data) ? response.data : [response.data];
                 
@@ -242,7 +236,12 @@ export default defineComponent({
     display: flex;
     align-items: center;
 }
-
+.aviso{
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    height: 3vw;
+}
 
 
 
