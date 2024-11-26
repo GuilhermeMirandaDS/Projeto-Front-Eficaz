@@ -11,14 +11,12 @@ import NavbarComponent from './components/NavbarComponent.vue';
 import router from '@/router/index.js';
 import BestSellers from './components/BestSellers.vue';
 
-const checkAuth = async() => {
+const checkAuth = async => {
   const token = sessionStorage.getItem('AUTH_TOKEN');
-  console.log("Token JWT:", token);
   if (!token) {
-      router.push("/login");                
-      throw new Error('Token não encontrado!');
+    router.push("/login");
+    console.log("token não encontrado!");
   }
-
 };
 
 checkAuth();
@@ -27,12 +25,14 @@ const route = useRoute();
 
 <template>
   <div>
-    <NavbarComponent/>
-  </div>
-  <div>
+    <div v-if="route.path !== '/register' && route.path !== '/login'">
+      <div>
+        <NavbarComponent/>
+      </div>
+    </div>
+
     <div v-if="route.path !== '/register' && route.path !== '/login'  && route.path !== '/user' && route.path !== '/edit'">
       
-
       <div class="hero">
         <HeroComponent />
       </div>
@@ -61,6 +61,10 @@ const route = useRoute();
 </template>
 
 <style>
+body{
+  padding: 0;
+  margin: 0;
+}
 .app{
   margin: 0;
   padding: 0;

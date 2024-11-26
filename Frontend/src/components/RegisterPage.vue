@@ -6,7 +6,7 @@
   
       <div class="form-container">
         <div class="form-box">
-          <RouterLink to="/">
+          <RouterLink to="/login">
             <img src="/src/assets/back_arrow.png" alt="Back Arrow" class="back-arrow" />
           </RouterLink>
           <div class="logo-container">
@@ -71,7 +71,7 @@
   
   
   <script lang="ts">
-  import { defineComponent } from 'vue';
+  import { onMounted, defineComponent } from 'vue';
   import axios from 'axios';
 
   export default defineComponent({
@@ -134,20 +134,34 @@
           console.error("Erro na requisição de cadastro:", error);
         }
       },
+
+    checkAuth() {
+      const token = sessionStorage.getItem('AUTH_TOKEN');
+      if (token) {
+        this.$router.push({ name: 'home' });
+      }
+    }
     },
+
+  mounted() {
+    this.checkAuth();
+  }
   });
   </script>
   
   <style scoped>
   
-  
+  input{
+    border: none;
+    outline: none;
+  }
+
   .page-container {
     display: flex;
     height: 100vh;
     width: 100%;
     margin: 0; 
-    padding: 0;
-    padding-top: 4%; 
+    padding: 0; 
   }
   
   

@@ -1,9 +1,8 @@
 <template>
-
     <div v-if="userData" id="app">
         <div class="top-page">
             <img :src="`https://localhost:7288/${userData.imageUrl}`" class="user-img" v-if="userData.imageUrl"/>
-            <p v-else> sem imagem </p>
+            <img v-else src="../assets/user-image-no.jpg" class="user-img"/>
             <div class="user-info1">
                 <h1>{{ userData.firstName }}</h1>
                 <h3>{{ userData.username }}</h3>

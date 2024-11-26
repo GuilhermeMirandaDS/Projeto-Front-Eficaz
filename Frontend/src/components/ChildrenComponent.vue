@@ -1,78 +1,86 @@
 <template>
     <div class="children-background">
-
-        <div class="hp-img">
-            <img id="red-hp" src="../assets/ImageredHP.png" alt="Red Headphone">
-            <img id="pink-hp" src="../assets/ImagepinkHP.png" alt="Pink Headphone">
+      <div class="hp-img">
+        <img
+          v-show="selectedColor === 'red'"
+          id="red-hp"
+          src="../assets/ImageredHP.png"
+          alt="Red Headphone"
+          class="slide-in"
+        />
+        <img
+          v-show="selectedColor === 'pink'"
+          id="pink-hp"
+          src="../assets/ImagepinkHP.png"
+          alt="Pink Headphone"
+          class="slide-in"
+        />
+      </div>
+  
+      <div class="hp-info">
+        <h1 class="title">JBL Children's Bluetooth Headphones</h1>
+        <div class="reviews">
+          <img class="stars" src="../assets/estrelas.png" />
+          <p class="qtd-reviews">18,921 (reviews)</p>
         </div>
-
-        <div class="hp-info">
-            <h1 class="title">JBL Children's Bluetooth Headphones</h1>
-            <div class="reviews">
-                <img class="stars" src="../assets/estrelas.png">
-                <p class="qtd-reviews">18,921 (reviews)</p> 
-            </div>
-            <div class="colors">
-                <p class="color-opt">Color Options</p>
-                <button type="button" id="red-btn"><img src=""></button>
-                <button type="button" id="pink-btn" class="selected"><img src=""></button>
-            </div>
-            <div class="price">
-                <p class="money-sign">$</p>
-                <h2>28</h2>
-                <div class="desconto">
-                    <p class="oldprice">$35,99</p>
-                    <p class="prcntoff">22% off</p>
-                </div>
-            </div>
-
-            <div class="button-buy">
-                <a class="buyBtn" href="#"><p class="btn-text">SEE MORE DETAILS</p><img class="arrow-buy" src="../assets/arrow_svg.svg"></a>
-            </div>
+        <div class="colors">
+          <p class="color-opt">Color Options</p>
+          <button
+            type="button"
+            :class="{ selected: selectedColor === 'red' }"
+            @click="selectColor('red')"
+          >
+            <img src="../assets/red-button.svg" />
+          </button>
+          <button
+            type="button"
+            :class="{ selected: selectedColor === 'pink' }"
+            @click="selectColor('pink')"
+          >
+            <img src="../assets/pink-button.svg" />
+          </button>
         </div>
+        <div class="price">
+          <p class="money-sign">$</p>
+          <h2>28</h2>
+          <div class="desconto">
+            <p class="oldprice">$35,99</p>
+            <p class="prcntoff">22% off</p>
+          </div>
+        </div>
+  
+        <div class="button-buy">
+          <a class="buyBtn" href="#">
+            <p class="btn-text">SEE MORE DETAILS</p>
+            <img class="arrow-buy" src="../assets/arrow_svg.svg" />
+          </a>
+        </div>
+      </div>
     </div>
-
-</template>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', () => {
-    const redButton = document.getElementById('red-btn');
-    const pinkButton = document.getElementById('pink-btn');
-    const redImage = document.getElementById('red-hp');
-    const pinkImage = document.getElementById('pink-hp');
-
-    function changeImage(showImage, hideImage) {
-        hideImage.style.display = 'none';
-        
-        showImage.style.display = 'block';
-        showImage.classList.add('slide-in');
-        setTimeout(() => showImage.classList.remove('slide-in'), 500);
-    }
-
-    function selectButton(selectedBtn, otherBtn) {
-        selectedBtn.classList.add('selected');
-        otherBtn.classList.remove('selected');
-    }
-
-    redButton.addEventListener('click', () => {
-        if (!redButton.classList.contains('selected')) {
-            changeImage(redImage, pinkImage);
-            selectButton(redButton, pinkButton);
-        }
-    });
-
-    pinkButton.addEventListener('click', () => {
-        if (!pinkButton.classList.contains('selected')) {
-            changeImage(pinkImage, redImage);
-            selectButton(pinkButton, redButton);
-        }
-    });
-});
-
-
-
-</script>
+  </template>
+  
+  <script>
+  import { ref, onMounted } from "vue";
+  
+  export default {
+    setup() {
+      const selectedColor = ref("pink");
+  
+      function selectColor(color) {
+        selectedColor.value = color;
+      }
+  
+      onMounted(() => {
+        selectedColor.value = "pink";
+      });
+  
+      return {
+        selectedColor,
+        selectColor,
+      };
+    },
+  };
+  </script>
 
 <style scoped>
 
@@ -124,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 #red-hp {
-    display: none;
     margin: 0px;
     padding: 0px;
     max-width: 100%;
@@ -297,16 +304,18 @@ h2{
     padding:10px;
 }
 
+.selected {
+  border: 1px solid #000;
+}
 
 .slide-in {
-    display: block;
     animation: slideUpIn 0.5s forwards;
 }
 
 @keyframes slideUpIn {
     from {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(50%);
     }
     to {
         opacity: 1;

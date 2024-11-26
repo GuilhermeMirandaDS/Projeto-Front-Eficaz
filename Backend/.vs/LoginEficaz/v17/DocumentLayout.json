@@ -1,13 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241125181712_testando1111.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241125181712_testando1111.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\ebper\\downloads\\projeto-front-eficaz\\backend\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241126150348_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Migrations\\20241126150348_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\backend\\adapters\\migrations\\20241125181712_testando1111.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C030A7A8-9D5A-45CE-B6A2-149DC7E3F019}|Adapters\\Adapters.csproj|solutionrelative:adapters\\migrations\\20241125181712_testando1111.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|c:\\users\\guiif\\documents\\github\\projeto-front-eficaz\\front-end\\backend\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55E00F8E-AD8D-4374-86AC-2CFBB6F54B98}|Application\\Application.csproj|solutionrelative:application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,28 +30,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dbo.Users [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LoginEficaz/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-26T15:12:09.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20241126150348_final.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241126150348_final.cs",
+              "RelativeDocumentMoniker": "Adapters\\Migrations\\20241126150348_final.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241126150348_final.cs",
+              "RelativeToolTip": "Adapters\\Migrations\\20241126150348_final.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:03:48.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20241125181712_testando1111.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241125181712_testando1111.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241125181712_testando1111.cs",
               "RelativeDocumentMoniker": "Adapters\\Migrations\\20241125181712_testando1111.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Adapters\\Migrations\\20241125181712_testando1111.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Adapters\\Migrations\\20241125181712_testando1111.cs",
               "RelativeToolTip": "Adapters\\Migrations\\20241125181712_testando1111.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T18:17:12.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Application\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ebper\\Downloads\\Projeto-Front-Eficaz\\Backend\\Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\guiif\\Documents\\GitHub\\Projeto-Front-Eficaz\\Front-End\\Backend\\Application\\Services\\ProductService.cs",
               "RelativeToolTip": "Application\\Services\\ProductService.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAIwEkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:15:41.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T18:15:41.82Z"
             }
           ]
         }

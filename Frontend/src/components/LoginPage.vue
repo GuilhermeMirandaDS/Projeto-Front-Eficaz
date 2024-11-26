@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router';
   
      
         <div class="form-section">
-          <RouterLink to="/">
+          <RouterLink to="/register">
             <img src="/src/assets/back_arrow.png" alt="Back Arrow" class="back-arrow" />
           </RouterLink>
           <div class="logo-section">
@@ -51,50 +51,48 @@ import { RouterLink, RouterView } from 'vue-router';
   </template>
   
   <script>
-  import { defineComponent } from 'vue';
-  import axios from 'axios';
-  import api from '@/services/api';
+import { onMounted, defineComponent } from 'vue';
+import router from '@/router/index.js';
+import axios from 'axios';
 
-  const checkAuth = async() => {
-    const token = sessionStorage.getItem('AUTH_TOKEN');
-    if (token) {
-        router.push("/");                
-        throw new Error('já autenticado');
-    }
+export default defineComponent({
+  name: 'UserLogin',
+  data() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await axios.post('https://localhost:7288/api/User/login', {
+          username: this.username,
+          password: this.password
+        });
 
-  };
-
-  checkAuth();
-
-  export default defineComponent({
-    
-    name:'UserLogin',
-    data() {
-      return {
-        username: '',
-        password: ''
-      };
-    },
-    methods: {
-
-      async submitForm() {
-        try {
-          const response = await axios.post('https://localhost:7288/api/User/login', {
-            username: this.username,
-            password: this.password
-          });
-
-          const token = response.data.token;
-          
-          window.sessionStorage.setItem("AUTH_TOKEN", token);
-          this.$router.push({ name: 'home' });
-        } catch (error) {
-          console.error("Erro na requisição de login:", error);
-          alert("Informações inválidas!");
-        }
+        const token = response.data.token;
+        
+        window.sessionStorage.setItem("AUTH_TOKEN", token);
+        this.$router.push({ name: 'home' });
+      } catch (error) {
+        console.error("Erro na requisição de login:", error);
+        alert("Informações inválidas!");
       }
     },
-  });
+
+    checkAuth() {
+      const token = sessionStorage.getItem('AUTH_TOKEN');
+      if (token) {
+        this.$router.push({ name: 'home' });
+      }
+    }
+  },
+
+  mounted() {
+    this.checkAuth();
+  }
+});
   </script>
   
   <style scoped>
@@ -104,7 +102,11 @@ import { RouterLink, RouterView } from 'vue-router';
     box-sizing: border-box;
   }
 
-  
+  input{
+    border: none;
+    outline: none;
+  }
+
   #app {
     font-family: 'Inter', sans-serif;
     display: flex;

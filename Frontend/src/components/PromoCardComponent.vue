@@ -1,92 +1,86 @@
 <template>
     <div class="back-promo">
-        <div class="info-promo">
-
-            <!-- Título -->
-            <div class="title">
-                <h1>Save 20% or more on Headset</h1>
-                <h3>Enjoy for a limited time</h3>
-            </div>
-
-            <!-- Temporizador -->
-            <div class="timer">
-                <div class="timer-sep">
-                    <h2 id="hours">00</h2>
-                    <p class="timer-name">HOURS</p>
-                </div>
-
-                <div class="timer-sep">
-                    <h2 id="minutes">00</h2>
-                    <p class="timer-name">MINUTES</p>
-                </div>
-
-                <div class="timer-sep">
-                    <h2 id="seconds">00</h2>
-                    <p class="timer-name">SECONDS</p>
-                </div>
-
-            </div>
-
-            <!-- Área do Botão -->
-            <div class="button-buy">
-                <a class="buyBtn" href="#"><p class="btn-text">SHOP NOW</p><img class="arrow-buy" src="../assets/arrow_svg.svg"></a>
-            </div>
-            <h4>Ends 18/08. Restrictions apply. See details</h4>
+      <div class="info-promo">
+        <div class="title">
+          <h1>Save 20% or more on Headset</h1>
+          <h3>Enjoy for a limited time</h3>
         </div>
-
-        <!-- Imagem do Produto -->
-        <div class="headphone">
-            <img class="promo-img" src="../assets/headphone-promo.png">
+        <div class="timer">
+          <div class="timer-sep">
+            <h2>{{ hours }}</h2>
+            <p class="timer-name">HOURS</p>
+          </div>
+          <div class="timer-sep">
+            <h2>{{ minutes }}</h2>
+            <p class="timer-name">MINUTES</p>
+          </div>
+          <div class="timer-sep">
+            <h2>{{ seconds }}</h2>
+            <p class="timer-name">SECONDS</p>
+          </div>
         </div>
+        <div class="button-buy">
+          <a class="buyBtn" href="#">
+            <p class="btn-text">SHOP NOW</p>
+            <img class="arrow-buy" src="../assets/arrow_svg.svg" />
+          </a>
+        </div>
+        <h4>Ends 25/12. Restrictions apply. See details</h4>
+      </div>
+      <div class="headphone">
+        <img class="promo-img" src="../assets/headphone-promo.png" />
+      </div>
     </div>
-</template>
-
-<script>
-
-    // Função que espera o conteúdo da página ser carregado e em seguida executa a contagem do temporizador
-    document.addEventListener('DOMContentLoaded', () => {
-        const hours = document.getElementById('hours');
-        const minutes = document.getElementById('minutes');
-        const seconds = document.getElementById('seconds');
-
-        const finalDate = new Date('November 20 2024 00:00:00');
-
-        function updateCountdown() {
-            const currentTime = new Date();
-            const diff = finalDate - currentTime;
-
-            const h = Math.floor(diff / 1000 / 60 / 60);
-            const m = Math.floor(diff / 1000 / 60) % 60;
-            const s = Math.floor(diff / 1000) % 60;
-
-            // updateNumber(hours, h);
-            // updateNumber(minutes, m);
-            // updateNumber(seconds, s);
+  </template>
+  
+  <script>
+  import { ref, onMounted } from "vue";
+  
+  export default {
+    setup() {
+      const hours = ref("00");
+      const minutes = ref("00");
+      const seconds = ref("00");
+  
+      const finalDate = new Date("December 25 2024 00:00:00");
+  
+      function updateCountdown() {
+        const currentTime = new Date();
+        const diff = finalDate - currentTime;
+  
+        if (diff <= 0) {
+          hours.value = "00";
+          minutes.value = "00";
+          seconds.value = "00";
+          return;
         }
-
-        // Função que executa a animação de alteração no temporizador
-        function updateNumber(element, newValue) {
-            const currentValue = parseInt(element.innerHTML, 10);
-            const formattedValue = newValue < 10 ? '0' + newValue : newValue; 
-
-            if (currentValue !== newValue) {
-                element.innerHTML = formattedValue;
-                element.classList.add('slide-in');
-                
-                setTimeout(() => {
-                    element.classList.remove('slide-in');
-                }, 500);
-            }
-    }
-        // Comando para a função ser executada a cada 1 segundo
+  
+        const h = Math.floor(diff / 1000 / 60 / 60);
+        const m = Math.floor(diff / 1000 / 60) % 60;
+        const s = Math.floor(diff / 1000) % 60;
+  
+        hours.value = h < 10 ? `0${h}` : `${h}`;
+        minutes.value = m < 10 ? `0${m}` : `${m}`;
+        seconds.value = s < 10 ? `0${s}` : `${s}`;
+      }
+  
+      onMounted(() => {
+        updateCountdown();
         setInterval(updateCountdown, 1000);
-    });
-</script>
+      });
+  
+      return {
+        hours,
+        minutes,
+        seconds,
+      };
+    },
+  };
+  </script>
 
 
 <style scoped>
 
-/* Estilização do Componente */
 
 .back-promo{
     display: flex;
@@ -225,7 +219,6 @@ h4{
     
 }
 
-/* Animação da troca de Valores do temporizador */
 
 .slide-in {
     animation: slideUpIn 0.5s forwards;
@@ -242,7 +235,6 @@ h4{
     }
 }
 
-/* Responsividade do componente */
 
 @media (max-width: 1024px) {
     .back-promo {

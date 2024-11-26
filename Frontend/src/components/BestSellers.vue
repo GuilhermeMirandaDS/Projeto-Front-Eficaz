@@ -14,7 +14,7 @@
             v-for="(product, index) in paginatedProducts" 
             :key="product.name"
           >
-            <img :src="product.img" alt="Product Image" class="product-image" />
+            <img :src="`https://localhost:7288/${product.imageUrl}`" class="product-image" v-if="product.imageUrl"/>
   
             <button class="favorite-btn" @click="toggleFavorite(product)">
               <img :src="product.isFavorited ? '/src/assets/Favorite_icon_1.png' : '/src/assets/Favorite_icon.png'" alt="Favorito" />
@@ -27,8 +27,8 @@
                 <span class="amount">{{ product.price.toFixed(2).replace('.', ',') }}</span>
               </p>
             </div>
-  
-            <!-- <div class="tags">
+<!--   
+            <div class="tags">
               <span class="tag">JBL</span>
               <span class="tag">Fone</span>
             </div> -->
@@ -75,15 +75,7 @@
     methods: {
       async fetchProducts() {
         try {
-          const token = sessionStorage.getItem('AUTH_TOKEN');
-            if (!token) {                
-                throw new Error('Token não encontrado!');
-            }
-          const response = await axios.get('https://localhost:7288/api/Product', {
-              headers: {
-                  Authorization: `Bearer ${token}`
-              }
-          });
+          const response = await axios.get('https://localhost:7288/api/Product');
           this.products = response.data;
         } catch (error) {
           console.error('Erro ao buscar produtos:', error);

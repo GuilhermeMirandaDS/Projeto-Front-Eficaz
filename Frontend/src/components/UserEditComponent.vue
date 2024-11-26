@@ -3,7 +3,7 @@
     <form @submit.prevent="updateUserData" id="app">
         <form @submit.prevent="updateUserData" class="top-page">
             <img :src="`https://localhost:7288/${userData.imageUrl}`" class="user-img" v-if="userData.imageUrl"/>
-            <p v-else> sem imagem </p>
+            <img v-else src="../assets/user-image-no.jpg" class="user-img"/>
             <div class="user-info1">
                 <img src=".../" alt="">
                 <h1>{{ userData.firstName }}</h1>
@@ -23,11 +23,11 @@
                 <div class="name-area">
                     <div class="object1">
                         <label>Name</label>
-                        <input class="label-input" type="text" v-model="userData.firstName" placeholder="Gabriela">
+                        <input class="label-input" type="text" v-model="userData.firstName" placeholder="First Name">
                     </div>
                     <div class="object1">
                         <label>Last Name</label>
-                        <input class="label-input" type="text" v-model="userData.lastName" placeholder="Leal">
+                        <input class="label-input" type="text" v-model="userData.lastName" placeholder="Last Name">
                     </div>
                 </div>
                 <div class="phone-area">
@@ -51,14 +51,14 @@
                 <div id="modalAdress" class="modal">
                     <div class="modalContent">
                         <label>New Address</label>
-                            <input class="label-input" type="number" v-model="userAdressData.zipCode" placeholder="CEP">
+                            <input class="label-input" type="text" v-model="userAdressData.zipCode" placeholder="Zipcode">
                             <input class="label-input" type="text" v-model="userAdressData.city" placeholder="City">
                             <input class="label-input" type="text" v-model="userAdressData.neighborhood" placeholder="Neighborhood">
                             <div class="last2-modal">
                                 <input class="label-input" type="text" v-model="userAdressData.street" placeholder="Road">
-                                <input class="label-input" type="number" v-model="userAdressData.number" placeholder="Number">
+                                <input class="label-input" type="text" v-model="userAdressData.number" placeholder="Number">
                             </div>
-                        <button type="submit"class="saveBtn" @click="closeModalAdress()">Save</button>
+                        <button type="submit"class="saveBtn" @click="closeModalAdress(); updateAdressData();">Save</button>
                         <button type="button" class="cancelBtn" @click="closeModalAdress">Cancel</button>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
             </div>
             <div class="object3">
                 <label>Password</label>
-                <input class="label-input" type="text" placeholder="*********" disabled="">
+                <input class="label-input" type="text" placeholder="*********" disabled>
             </div>
         </div>
         <div class="card-info">
@@ -87,9 +87,9 @@
                     <label>New Card</label>
                     <div class="last2-modal">
                         <input type="date" v-model="userCardData.expiryDate" placeholder="MM/YY">
-                        <input type="number" v-model="userCardData.cvc" placeholder="CVC">
+                        <input type="text" v-model="userCardData.cvc" placeholder="CVC">
                     </div>
-                    <input type="number" class="card-input" v-model="userCardData.cardNumber" placeholder="0000 0000 0000 0000">
+                    <input type="text" class="card-input" v-model="userCardData.cardNumber" placeholder="0000 0000 0000 0000">
                     <button type="submit"class="savecardBtn" @click="closeModalCard(); updateCardData();">Save</button>
                     <button type="button" class="cancelcardBtn" @click="closeModalCard">Cancel</button>
                 </div>
@@ -106,7 +106,6 @@ import axios from 'axios';
 import router from '@/router/index.js';
 import { onMounted, ref, defineComponent } from 'vue';
 import api from "@/services/api";
-
 
 export default defineComponent ({
     name: "userProfileEdit",
@@ -144,6 +143,7 @@ export default defineComponent ({
             try {
 
                 const token = sessionStorage.getItem('AUTH_TOKEN');
+                console.log(token);
                 if (!token) {
                     router.push("/login");                
                     throw new Error('Token não encontrado!');
@@ -184,14 +184,40 @@ export default defineComponent ({
             
         };
 
+        const updateAdressData = async () => {
+            try{
+                const token = sessionStorage.getItem('AUTH_TOKEN');
+
+                if (!token) {
+                    throw new Error('Token não encontrado!');
+                }
+
+                userAdressData.value.userId = userData.value.id;
+
+                const response = await axios.post('https://localhost:7288/api/Address', userAdressData.value, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                console.log("endereço adicionado com sucesso");
+            } catch (error) {
+                console.error('Erro ao inserir endereço do usuário:', error);
+                alert('Erro ao inserir endereço do usuário');
+            }
+        };
+
         const updateCardData = async () => {
             try{
                 const token = sessionStorage.getItem('AUTH_TOKEN');
+                
                 if (!token) {
                     throw new Error('Token não encontrado!');
                 }
 
                 const expiryDate = new Date(userCardData.value.expiryDate);
+                const formattedDate = expiryDate.toISOString().split('T')[0];
 
                 userCardData.value.expiryDate = expiryDate.toISOString();
 
@@ -200,7 +226,6 @@ export default defineComponent ({
                 const response = await axios.post('https://localhost:7288/api/CreditCard', userCardData.value, {
                     headers: {
                         Authorization: `Bearer ${token}`,
-                        'Content-Type': 'application/json'
                     },
                 });
 
@@ -211,7 +236,6 @@ export default defineComponent ({
 
                 console.log("cartão adicionado com sucesso");
             } catch (error) {
-                console.log('Dados do cartão:', userCardData.value);
                 console.error('Erro ao inserir cartão do usuário:', error);
                 alert('Erro ao inserir cartão do usuário');
             }
@@ -233,12 +257,12 @@ export default defineComponent ({
                 }
 
                 const formData = new FormData();
-                formData.append("image", fileInput.files[0]);
+                formData.append("file", fileInput.files[0]);
 
-                const updateImage = await axios.post(`/api/User/${userId}/UploadImage`, formData, {
+                const updateImage = await axios.post(`https://localhost:7288/api/User/${userId}/UploadImage`, formData, {
                     headers: {
                         Authorization: `Bearer ${token}`,
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'multipart/form-data',
                     }
                 })
 
@@ -257,6 +281,7 @@ export default defineComponent ({
             userAdressData,
             updateUserImg,
             updateUserData,
+            updateAdressData,
             updateCardData
         };
     },

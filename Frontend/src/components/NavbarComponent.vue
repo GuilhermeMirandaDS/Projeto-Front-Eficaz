@@ -29,6 +29,7 @@
         <div class="nav-auth">
             <RouterLink v-if="isAuthenticated" to="/user" class="userlink">
                 <img :src="`https://localhost:7288/${userData.imageUrl}`" class="userIMG" v-if="userData.imageUrl"/>
+                <img v-else src="../assets/user-image-no.jpg" class="userIMG"/>
             </RouterLink>
             <RouterLink v-if="!isAuthenticated" to="/login" class="sign-in" style="font-weight: 900;">SIGN IN</RouterLink>
             <RouterLink v-if="!isAuthenticated" to="/register" class="signup">SIGN UP FOR FREE</RouterLink>
@@ -37,19 +38,23 @@
 </template>
 
 <script setup lang="ts">
-
-import { ref, onMounted } from 'vue';
-import { RouterLink } from 'vue-router';
+import { onMounted } from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 
 const isAuthenticated = ref(false);
 const userData = ref<{ imageUrl: string } | null>(null);
 
+const isMenuActive = ref(false);
+const toggleMenu = () => {
+    isMenuActive.value = !isMenuActive.value;
+};
+
 const getUserData = async () => {
     try {
-
         const token = sessionStorage.getItem('AUTH_TOKEN');
-        if (!token) {               
+        if (!token) {   
+            isAuthenticated.value = false;            
             throw new Error('Token não encontrado!');
         }
 
@@ -60,18 +65,17 @@ const getUserData = async () => {
         });
         userData.value = response.data;
         isAuthenticated.value = true;
-
     } catch (error) {
         console.error('Erro ao buscar os dados do usuário:', error);
         isAuthenticated.value = false;
     }
-    };
+};
 
 onMounted(() => {
     getUserData();
 });
-
 </script>
+
 
 <style scoped>
 
